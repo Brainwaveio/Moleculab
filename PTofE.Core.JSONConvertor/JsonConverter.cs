@@ -12,7 +12,7 @@ namespace PTofE.Core.JSONConvertor
 			var inputJson = await File.ReadAllTextAsync(inputFilePath);
 			var tableStructure = JsonConvert.DeserializeObject<TableStructure>(inputJson);
 
-			var elements = new List<ElementsDto>();
+			var elements = new List<ElementDto>();
 
 			if (tableStructure == null)
 			{
@@ -24,7 +24,7 @@ namespace PTofE.Core.JSONConvertor
 				var cells = row.Cell;
 				ElemntState elementState = ParseElementState(cells[11]);
 
-				var element = new ElementsDto
+				var element = new ElementDto
 				{
 					Id = Guid.NewGuid(),
 					Index = int.Parse(cells[0]),

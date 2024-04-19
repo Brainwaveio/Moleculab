@@ -1,6 +1,6 @@
 ﻿namespace PTofE.Core.DTOs
 {
-	public class ElementsDto
+	public class ElementDto
 	{
 		public required Guid Id { get; set; }
 		public required int Index { get; set; }
