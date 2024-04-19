@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace PTofE.Console.Model
+namespace PTofE.Core.JSONConvertor.Model
 {
 	internal class Table
 	{

@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
-using PTofE.Console.Model;
-using PTofE.Core;
+using PTofE.Core.JSONConvertor.Model;
 using PTofE.Core.DTOs;
 using System.Globalization;
 
-namespace PTofE.Console
+namespace PTofE.Core.JSONConvertor
 {
 	public class JsonConverter
 	{
