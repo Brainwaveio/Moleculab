@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PTofE.Core", "PTofE.Core\PT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTofE.Core.JSONConvertor", "PTofE.Core.JSONConvertor\PTofE.Core.JSONConvertor.csproj", "{BD65B090-5B85-4B7C-BF1E-70DD92853955}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTofE.WPF", "PTofE.WPF\PTofE.WPF.csproj", "{118DCFCB-08AB-4FA3-9828-220134834EAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{BD65B090-5B85-4B7C-BF1E-70DD92853955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD65B090-5B85-4B7C-BF1E-70DD92853955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD65B090-5B85-4B7C-BF1E-70DD92853955}.Release|Any CPU.Build.0 = Release|Any CPU
+		{118DCFCB-08AB-4FA3-9828-220134834EAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{118DCFCB-08AB-4FA3-9828-220134834EAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{118DCFCB-08AB-4FA3-9828-220134834EAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{118DCFCB-08AB-4FA3-9828-220134834EAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
