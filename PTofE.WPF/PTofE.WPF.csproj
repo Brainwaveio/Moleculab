@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="quantumquery.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="quantumquery.ico" />
+  </ItemGroup>
+
 </Project>

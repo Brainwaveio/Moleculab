@@ -4,9 +4,52 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PTofE.WPF"
+        Background="Transparent"
+        Icon="quantumquery.ico"
         mc:Ignorable="d"
         Title="QuantumQuery" Height="900" Width="1600">
-    <Grid>
 
+    <Grid Background="#1e1e1e">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" MinWidth="300"/>
+            <ColumnDefinition Width="5"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0"
+                Background="#252525">
+            <!-- left menu -->
+        </Border>
+
+        <GridSplitter Grid.Column="1" Width="5" 
+                      HorizontalAlignment="Center" 
+                      VerticalAlignment="Stretch"
+                      Background="#252525">
+            <GridSplitter.Triggers>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="Background.Color" 
+                                            To="#007ACC" 
+                                            BeginTime="0:0:1" Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Storyboard.TargetProperty="Background.Color" 
+                                            To="#252525" 
+                                            Duration="0:0:0.1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </GridSplitter.Triggers>
+        </GridSplitter>
+
+        <Grid Grid.Column="2">
+            <!-- main window -->
+        </Grid>
     </Grid>
+
 </Window>
