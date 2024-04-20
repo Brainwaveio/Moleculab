@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PTofE.Core\PTofE.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="quantumquery.ico" />
   </ItemGroup>
 

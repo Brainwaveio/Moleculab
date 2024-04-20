@@ -4,10 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PTofE.WPF"
+        xmlns:extensions="clr-namespace:PTofE.WPF.Extensions"
+        xmlns:viewmodel="clr-namespace:PTofE.WPF.MVVM.ViewModel"
         Background="Transparent"
-        Icon="quantumquery.ico"
+        Icon="/quantumquery.ico"
         mc:Ignorable="d"
         Title="QuantumQuery" Height="900" Width="1600">
+
+    <Window.DataContext>
+        <viewmodel:MainWindowModel/>
+    </Window.DataContext>
 
     <Grid Background="#1e1e1e">
         <Grid.ColumnDefinitions>
@@ -19,6 +25,7 @@
         <Border Grid.Column="0"
                 Background="#252525">
             <!-- left menu -->
+            <ContentPresenter Content="{Binding CurrentView}" />
         </Border>
 
         <GridSplitter Grid.Column="1" Width="5" 
@@ -51,5 +58,4 @@
             <!-- main window -->
         </Grid>
     </Grid>
-
 </Window>
