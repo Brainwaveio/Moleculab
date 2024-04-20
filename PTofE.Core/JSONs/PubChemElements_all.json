@@ -1,6 +1,6 @@
 [
   {
-    "Id": "a4b167e8-d633-47a4-add0-5f9857d00daf",
+    "Id": "e903d32e-8802-47cc-925a-2119c337754d",
     "Index": 1,
     "ShortName": "H",
     "ElementName": "Hydrogen",
@@ -20,7 +20,7 @@
     "YearDiscovered": "1766"
   },
   {
-    "Id": "18a517a2-1dfe-4402-adcc-ab3d52812eb8",
+    "Id": "8222cbd0-967b-4636-a8e8-6009f5e7e181",
     "Index": 2,
     "ShortName": "He",
     "ElementName": "Helium",
@@ -40,7 +40,7 @@
     "YearDiscovered": "1868"
   },
   {
-    "Id": "bafe106d-2373-441a-9073-139b89ecafe0",
+    "Id": "ce4ac8e3-072e-41b9-98b5-eaf30ed6a630",
     "Index": 3,
     "ShortName": "Li",
     "ElementName": "Lithium",
@@ -60,7 +60,7 @@
     "YearDiscovered": "1817"
   },
   {
-    "Id": "a30e63c6-7f9e-4270-abb7-028608c5b2fb",
+    "Id": "91e57262-f98b-4946-a0d0-6b1d9d3ec058",
     "Index": 4,
     "ShortName": "Be",
     "ElementName": "Beryllium",
@@ -80,7 +80,7 @@
     "YearDiscovered": "1798"
   },
   {
-    "Id": "85953e16-fc80-4554-bcbd-3bd09f969b1d",
+    "Id": "8a5f1453-fc59-4041-abdd-82fe43695abe",
     "Index": 5,
     "ShortName": "B",
     "ElementName": "Boron",
@@ -100,7 +100,7 @@
     "YearDiscovered": "1808"
   },
   {
-    "Id": "d79e5fcc-28c2-4f84-8b25-910efcbd6cfd",
+    "Id": "181e9064-7819-4817-b4fc-06c740f62621",
     "Index": 6,
     "ShortName": "C",
     "ElementName": "Carbon",
@@ -120,7 +120,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "73659daf-ef64-4c06-9ffe-ad629f51638b",
+    "Id": "041dd531-164d-40f6-8dc5-1c139294a718",
     "Index": 7,
     "ShortName": "N",
     "ElementName": "Nitrogen",
@@ -140,7 +140,7 @@
     "YearDiscovered": "1772"
   },
   {
-    "Id": "95cf2908-f89b-48ba-8e1d-c023ea3b22db",
+    "Id": "ef5bab7e-ad88-485b-9cdf-eb4651f042fc",
     "Index": 8,
     "ShortName": "O",
     "ElementName": "Oxygen",
@@ -160,7 +160,7 @@
     "YearDiscovered": "1774"
   },
   {
-    "Id": "bd0077ae-8c76-42af-8aae-68d55429c76c",
+    "Id": "e6dd940e-ccad-42e0-8130-9aba001bacf1",
     "Index": 9,
     "ShortName": "F",
     "ElementName": "Fluorine",
@@ -180,7 +180,7 @@
     "YearDiscovered": "1670"
   },
   {
-    "Id": "ecac33fd-4556-4f5c-a9f9-89214002adeb",
+    "Id": "bfe6bc17-64b6-450f-903d-25ab1d51d756",
     "Index": 10,
     "ShortName": "Ne",
     "ElementName": "Neon",
@@ -200,7 +200,7 @@
     "YearDiscovered": "1898"
   },
   {
-    "Id": "8bc11059-906e-4fb9-a41c-83d758c05986",
+    "Id": "13e8cba3-0437-43c3-9eda-6fc481a6cc64",
     "Index": 11,
     "ShortName": "Na",
     "ElementName": "Sodium",
@@ -220,7 +220,7 @@
     "YearDiscovered": "1807"
   },
   {
-    "Id": "feede5f3-ae5a-4f77-9795-c5eaae6e39c5",
+    "Id": "e690c293-9ff2-4fd7-b7a5-ce4be3b55519",
     "Index": 12,
     "ShortName": "Mg",
     "ElementName": "Magnesium",
@@ -240,7 +240,7 @@
     "YearDiscovered": "1808"
   },
   {
-    "Id": "9e150566-bf42-480d-9f2a-deb73048225a",
+    "Id": "17117cf7-8336-4c1b-a3ae-e3e8b0f516a0",
     "Index": 13,
     "ShortName": "Al",
     "ElementName": "Aluminum",
@@ -260,7 +260,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "6a48f875-f77c-464d-b9b4-269be126982e",
+    "Id": "980234ea-9fe3-4305-9244-ab4f0889e179",
     "Index": 14,
     "ShortName": "Si",
     "ElementName": "Silicon",
@@ -280,7 +280,7 @@
     "YearDiscovered": "1854"
   },
   {
-    "Id": "b0466eff-9835-490d-9f3d-bf1d3f03cd67",
+    "Id": "dd41074a-c03c-4342-93c3-1cf6114ad88f",
     "Index": 15,
     "ShortName": "P",
     "ElementName": "Phosphorus",
@@ -300,7 +300,7 @@
     "YearDiscovered": "1669"
   },
   {
-    "Id": "1f51d4dd-6aac-40cc-b8d7-e980fac5efe8",
+    "Id": "a48e7812-3daf-4b96-8b2b-865d0fb0aeb5",
     "Index": 16,
     "ShortName": "S",
     "ElementName": "Sulfur",
@@ -320,7 +320,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "67aa14d9-4599-4daa-ab23-f8bb4481dc29",
+    "Id": "d8bd3c59-cec7-45ad-a1f7-09b173a6bc32",
     "Index": 17,
     "ShortName": "Cl",
     "ElementName": "Chlorine",
@@ -340,7 +340,7 @@
     "YearDiscovered": "1774"
   },
   {
-    "Id": "aea8df48-42d2-4a7d-8a25-592313493356",
+    "Id": "c47c6248-ef96-470e-9f53-41536a04cfdb",
     "Index": 18,
     "ShortName": "Ar",
     "ElementName": "Argon",
@@ -360,7 +360,7 @@
     "YearDiscovered": "1894"
   },
   {
-    "Id": "84193ede-47d1-4625-9c9e-ee5e211ab4f5",
+    "Id": "b4fcc1d7-a721-4fee-999d-61ec3036d446",
     "Index": 19,
     "ShortName": "K",
     "ElementName": "Potassium",
@@ -380,7 +380,7 @@
     "YearDiscovered": "1807"
   },
   {
-    "Id": "ef891a0f-4f41-4eb3-b109-cdc4c2af5460",
+    "Id": "73ef8c47-5e8d-44ad-b0c2-d8b67e26dada",
     "Index": 20,
     "ShortName": "Ca",
     "ElementName": "Calcium",
@@ -400,7 +400,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "7c68e08b-e2d8-43fc-8663-e3bfd24b9894",
+    "Id": "a1034366-b3e1-4e9e-8921-92f07b361ff1",
     "Index": 21,
     "ShortName": "Sc",
     "ElementName": "Scandium",
@@ -420,7 +420,7 @@
     "YearDiscovered": "1879"
   },
   {
-    "Id": "33bcd6a5-ba35-4462-8b3e-ff6503932af7",
+    "Id": "0a8fcaed-0436-4ad8-a600-44ce629295c2",
     "Index": 22,
     "ShortName": "Ti",
     "ElementName": "Titanium",
@@ -440,7 +440,7 @@
     "YearDiscovered": "1791"
   },
   {
-    "Id": "3a660cac-a1d9-4468-843b-2cbe48c42ac7",
+    "Id": "fd3bbf27-815d-4df6-93e0-86886442edc6",
     "Index": 23,
     "ShortName": "V",
     "ElementName": "Vanadium",
@@ -460,7 +460,7 @@
     "YearDiscovered": "1801"
   },
   {
-    "Id": "e8dbbebf-f78a-4413-bc81-660e07ed9aec",
+    "Id": "28622221-c365-48af-80a1-31475ef0aca9",
     "Index": 24,
     "ShortName": "Cr",
     "ElementName": "Chromium",
@@ -480,7 +480,7 @@
     "YearDiscovered": "1797"
   },
   {
-    "Id": "cc03808a-ab0e-420d-a4db-ea53025bda7b",
+    "Id": "deb1b26c-afea-401b-8b75-824a432e1c88",
     "Index": 25,
     "ShortName": "Mn",
     "ElementName": "Manganese",
@@ -500,7 +500,7 @@
     "YearDiscovered": "1774"
   },
   {
-    "Id": "aa482091-3a91-4fd8-bffc-cc65679c3231",
+    "Id": "5473b3f6-3cb7-4f65-8c63-d85f44518b31",
     "Index": 26,
     "ShortName": "Fe",
     "ElementName": "Iron",
@@ -520,7 +520,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "2ddbee33-4160-4c26-bab7-09e0987c7b11",
+    "Id": "58228e35-e0ed-494d-a4c4-c423d4d90201",
     "Index": 27,
     "ShortName": "Co",
     "ElementName": "Cobalt",
@@ -540,7 +540,7 @@
     "YearDiscovered": "1735"
   },
   {
-    "Id": "d3fa28f9-7d3a-478a-8221-5729eb7cf9d8",
+    "Id": "09d41ab8-2b40-4249-bd31-94d0cad558c9",
     "Index": 28,
     "ShortName": "Ni",
     "ElementName": "Nickel",
@@ -560,7 +560,7 @@
     "YearDiscovered": "1751"
   },
   {
-    "Id": "9f43d4f5-a841-446d-9f21-08e2db1d8b30",
+    "Id": "2764a906-38d0-4c78-b8cb-9b06bd0b3049",
     "Index": 29,
     "ShortName": "Cu",
     "ElementName": "Copper",
@@ -580,7 +580,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "f6a115fe-2666-412b-bd71-9f4081fa9a05",
+    "Id": "7cf57ff4-c7b5-422d-abe9-484e80add790",
     "Index": 30,
     "ShortName": "Zn",
     "ElementName": "Zinc",
@@ -600,7 +600,7 @@
     "YearDiscovered": "1746"
   },
   {
-    "Id": "007d7fe9-7790-43f4-9cbc-d2a38a477e56",
+    "Id": "1a42f77c-34ca-4418-97a2-5f39dc967301",
     "Index": 31,
     "ShortName": "Ga",
     "ElementName": "Gallium",
@@ -620,7 +620,7 @@
     "YearDiscovered": "1875"
   },
   {
-    "Id": "feceedcb-11dc-43cd-a740-d718aa46dd6d",
+    "Id": "2bdafee6-7884-47d4-8a1f-9449896ca145",
     "Index": 32,
     "ShortName": "Ge",
     "ElementName": "Germanium",
@@ -640,7 +640,7 @@
     "YearDiscovered": "1886"
   },
   {
-    "Id": "95893f28-a116-46ab-b6d8-071a8b4a1040",
+    "Id": "aedcc41c-e971-48b8-80b0-c7d856686eac",
     "Index": 33,
     "ShortName": "As",
     "ElementName": "Arsenic",
@@ -660,7 +660,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "ddc78aef-ec66-44c7-8a13-f3dd1334741a",
+    "Id": "4ef47fc0-7a59-44be-b0dc-1438f9aea196",
     "Index": 34,
     "ShortName": "Se",
     "ElementName": "Selenium",
@@ -680,7 +680,7 @@
     "YearDiscovered": "1817"
   },
   {
-    "Id": "88c739f4-175f-47ea-b393-b8c4b61c13f7",
+    "Id": "e9358e3f-82a1-4d11-95d6-ef01c16e85d8",
     "Index": 35,
     "ShortName": "Br",
     "ElementName": "Bromine",
@@ -700,7 +700,7 @@
     "YearDiscovered": "1826"
   },
   {
-    "Id": "00eb261d-0ca2-498e-8a2f-6784eba5a783",
+    "Id": "81606dbb-5326-4360-bd36-b30f1dbc5d3b",
     "Index": 36,
     "ShortName": "Kr",
     "ElementName": "Krypton",
@@ -720,7 +720,7 @@
     "YearDiscovered": "1898"
   },
   {
-    "Id": "83242894-b813-4bb8-8371-db9c443342fa",
+    "Id": "aef7a053-d93e-48ff-b4b9-9373dacaad9e",
     "Index": 37,
     "ShortName": "Rb",
     "ElementName": "Rubidium",
@@ -740,7 +740,7 @@
     "YearDiscovered": "1861"
   },
   {
-    "Id": "c28d68f5-15b0-4bbe-9687-1a5a87012b17",
+    "Id": "c424e37c-a615-4eb3-9377-8d98ca30e1cd",
     "Index": 38,
     "ShortName": "Sr",
     "ElementName": "Strontium",
@@ -760,7 +760,7 @@
     "YearDiscovered": "1790"
   },
   {
-    "Id": "4ad5667b-d8a4-4737-9fa3-46727bd09396",
+    "Id": "42e1c594-4409-4dfe-b166-d732b48b0424",
     "Index": 39,
     "ShortName": "Y",
     "ElementName": "Yttrium",
@@ -780,7 +780,7 @@
     "YearDiscovered": "1794"
   },
   {
-    "Id": "9d41c61a-b151-4cde-844f-0ed8c2343ffe",
+    "Id": "c7a8b372-2eae-4ab4-aa78-4a87607403c7",
     "Index": 40,
     "ShortName": "Zr",
     "ElementName": "Zirconium",
@@ -800,7 +800,7 @@
     "YearDiscovered": "1789"
   },
   {
-    "Id": "74e3e1da-b63a-474b-a57c-a250a088088a",
+    "Id": "e34db4fd-8dfb-4cd9-8e3e-0ab01f2601a4",
     "Index": 41,
     "ShortName": "Nb",
     "ElementName": "Niobium",
@@ -820,7 +820,7 @@
     "YearDiscovered": "1801"
   },
   {
-    "Id": "eadc9bc5-dc9b-4c46-9214-1c4a1a683f6f",
+    "Id": "02e24665-af1b-4ad1-9055-452de7f0bbdf",
     "Index": 42,
     "ShortName": "Mo",
     "ElementName": "Molybdenum",
@@ -840,7 +840,7 @@
     "YearDiscovered": "1778"
   },
   {
-    "Id": "bd1a5258-6c10-47a7-8a49-69e157843f3a",
+    "Id": "271bbdb1-5715-42c4-b4a5-b9f8b1e4e46b",
     "Index": 43,
     "ShortName": "Tc",
     "ElementName": "Technetium",
@@ -860,7 +860,7 @@
     "YearDiscovered": "1937"
   },
   {
-    "Id": "6979433b-c90a-4c5d-bc5b-38d1fb663122",
+    "Id": "23df1fc7-ec0e-4fa5-81d8-5311ebcc640f",
     "Index": 44,
     "ShortName": "Ru",
     "ElementName": "Ruthenium",
@@ -880,7 +880,7 @@
     "YearDiscovered": "1827"
   },
   {
-    "Id": "dc3d206d-e0c7-4208-aeb8-05c53f79dbe0",
+    "Id": "e29662be-5d02-40ca-a481-d0935a8d34f5",
     "Index": 45,
     "ShortName": "Rh",
     "ElementName": "Rhodium",
@@ -900,7 +900,7 @@
     "YearDiscovered": "1803"
   },
   {
-    "Id": "7af40759-c4f9-4168-afc2-824b785a0495",
+    "Id": "b7ac5e00-a310-4bad-bb43-8b04aa379328",
     "Index": 46,
     "ShortName": "Pd",
     "ElementName": "Palladium",
@@ -920,7 +920,7 @@
     "YearDiscovered": "1803"
   },
   {
-    "Id": "55c3690c-df38-41e3-8d05-70f55a46b919",
+    "Id": "ae5ba8f0-0e4d-4d22-93fe-f3117be5e23b",
     "Index": 47,
     "ShortName": "Ag",
     "ElementName": "Silver",
@@ -940,7 +940,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "abc79349-ab50-46e0-b4c4-91457bb8b1c8",
+    "Id": "2124170c-d645-4b51-bdf2-9a445a92fcbb",
     "Index": 48,
     "ShortName": "Cd",
     "ElementName": "Cadmium",
@@ -960,7 +960,7 @@
     "YearDiscovered": "1817"
   },
   {
-    "Id": "a204e758-b4c4-40c6-82eb-491b76fe3f86",
+    "Id": "51851831-1485-450a-8172-cf2762c6748b",
     "Index": 49,
     "ShortName": "In",
     "ElementName": "Indium",
@@ -980,7 +980,7 @@
     "YearDiscovered": "1863"
   },
   {
-    "Id": "9b2f9c07-ef63-46ec-b7e7-256638ef5835",
+    "Id": "bc894ae1-43b9-482c-aea6-aedf1ff69462",
     "Index": 50,
     "ShortName": "Sn",
     "ElementName": "Tin",
@@ -1000,7 +1000,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "b7d9b843-fc33-453a-ad62-65858955b6ce",
+    "Id": "3efad542-5d12-47c1-b5a4-2a57fba75f2a",
     "Index": 51,
     "ShortName": "Sb",
     "ElementName": "Antimony",
@@ -1020,7 +1020,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "c8223358-5c4b-4f11-ab3a-f711ef0b24fe",
+    "Id": "6cdb01de-9bdf-4008-b9e1-f110906268ef",
     "Index": 52,
     "ShortName": "Te",
     "ElementName": "Tellurium",
@@ -1040,7 +1040,7 @@
     "YearDiscovered": "1782"
   },
   {
-    "Id": "9e6d6ea0-d9eb-4416-ba6a-3cbf1c321e99",
+    "Id": "f21b8032-845f-4abb-849c-516e3147e773",
     "Index": 53,
     "ShortName": "I",
     "ElementName": "Iodine",
@@ -1060,7 +1060,7 @@
     "YearDiscovered": "1811"
   },
   {
-    "Id": "8f882246-f298-440f-b447-8a6278c4bc67",
+    "Id": "e4b5e348-ec5f-4125-ab83-bcbea7915385",
     "Index": 54,
     "ShortName": "Xe",
     "ElementName": "Xenon",
@@ -1080,7 +1080,7 @@
     "YearDiscovered": "1898"
   },
   {
-    "Id": "efee0f57-dc33-4908-a6b9-091564a8e06d",
+    "Id": "e756168d-a5b7-4e4d-a788-ed2336568cdd",
     "Index": 55,
     "ShortName": "Cs",
     "ElementName": "Cesium",
@@ -1100,7 +1100,7 @@
     "YearDiscovered": "1860"
   },
   {
-    "Id": "70a49952-68c7-4dff-ac94-36379718209e",
+    "Id": "a73d7dc1-bedb-4029-8692-1f8e92e1a347",
     "Index": 56,
     "ShortName": "Ba",
     "ElementName": "Barium",
@@ -1120,7 +1120,7 @@
     "YearDiscovered": "1808"
   },
   {
-    "Id": "46857552-5488-49ca-954f-1a8ba7f032b7",
+    "Id": "6493fab6-cc64-4cc1-8a93-5387de42eacc",
     "Index": 57,
     "ShortName": "La",
     "ElementName": "Lanthanum",
@@ -1140,7 +1140,7 @@
     "YearDiscovered": "1839"
   },
   {
-    "Id": "1de5f89d-ec7a-4a75-998c-b033d0a68ccb",
+    "Id": "2af5feca-4093-4947-a5e5-4bb43268c50a",
     "Index": 58,
     "ShortName": "Ce",
     "ElementName": "Cerium",
@@ -1160,7 +1160,7 @@
     "YearDiscovered": "1803"
   },
   {
-    "Id": "25cba635-af1c-49aa-b256-42f2bf023dc7",
+    "Id": "8c4b8bc7-3e15-416d-94dd-df035d03fba4",
     "Index": 59,
     "ShortName": "Pr",
     "ElementName": "Praseodymium",
@@ -1180,7 +1180,7 @@
     "YearDiscovered": "1885"
   },
   {
-    "Id": "f65825f1-1c22-4bd1-8bdf-5732ef8148da",
+    "Id": "2b34a07e-7359-4249-b143-496459810a9e",
     "Index": 60,
     "ShortName": "Nd",
     "ElementName": "Neodymium",
@@ -1200,7 +1200,7 @@
     "YearDiscovered": "1885"
   },
   {
-    "Id": "b7e6f181-5a48-4877-ac00-097e0cbc49c9",
+    "Id": "ca9a39c2-6708-4b46-960b-543f1077307b",
     "Index": 61,
     "ShortName": "Pm",
     "ElementName": "Promethium",
@@ -1220,7 +1220,7 @@
     "YearDiscovered": "1945"
   },
   {
-    "Id": "e75f61d6-b7a0-4097-9f6a-6d2a3052cd6d",
+    "Id": "fc271604-1166-404d-afd9-4b3373596ba2",
     "Index": 62,
     "ShortName": "Sm",
     "ElementName": "Samarium",
@@ -1240,7 +1240,7 @@
     "YearDiscovered": "1879"
   },
   {
-    "Id": "7b6cd16a-7a2e-4977-9e3f-851c50766a54",
+    "Id": "4998f29f-3209-4708-a38a-ca691f24cee0",
     "Index": 63,
     "ShortName": "Eu",
     "ElementName": "Europium",
@@ -1260,7 +1260,7 @@
     "YearDiscovered": "1901"
   },
   {
-    "Id": "9e93ddc6-2e3d-413e-8ea2-6033a4cf9546",
+    "Id": "d65dcb69-02cd-40a3-a6e5-bdf9237aca04",
     "Index": 64,
     "ShortName": "Gd",
     "ElementName": "Gadolinium",
@@ -1280,7 +1280,7 @@
     "YearDiscovered": "1880"
   },
   {
-    "Id": "b8f2e1f2-0aab-4090-8e97-ba6e1cf9de95",
+    "Id": "3c8faeb6-c1b7-4c7b-888b-396fd57228a1",
     "Index": 65,
     "ShortName": "Tb",
     "ElementName": "Terbium",
@@ -1300,7 +1300,7 @@
     "YearDiscovered": "1843"
   },
   {
-    "Id": "3382d320-e6a2-4a9f-a8ac-202e81428157",
+    "Id": "d6337130-9dc0-4a28-9518-a0eff766bda6",
     "Index": 66,
     "ShortName": "Dy",
     "ElementName": "Dysprosium",
@@ -1320,7 +1320,7 @@
     "YearDiscovered": "1886"
   },
   {
-    "Id": "8a4ef756-c9b9-4105-aa63-4c04ab51e5cc",
+    "Id": "ffa38180-96ff-4d1d-97b2-e1f60fcad639",
     "Index": 67,
     "ShortName": "Ho",
     "ElementName": "Holmium",
@@ -1340,7 +1340,7 @@
     "YearDiscovered": "1878"
   },
   {
-    "Id": "d3fbaacb-f561-4799-9a05-0b7a419fb890",
+    "Id": "2e7453c2-cb50-4dcc-a518-c4fcd7ee0746",
     "Index": 68,
     "ShortName": "Er",
     "ElementName": "Erbium",
@@ -1360,7 +1360,7 @@
     "YearDiscovered": "1843"
   },
   {
-    "Id": "3c7ea7da-6370-49a9-82ce-18def0b1cedd",
+    "Id": "08b78c44-9842-493d-816e-cc28393b873b",
     "Index": 69,
     "ShortName": "Tm",
     "ElementName": "Thulium",
@@ -1380,7 +1380,7 @@
     "YearDiscovered": "1879"
   },
   {
-    "Id": "109aed64-9745-4c8f-b5ac-915f9630bd4a",
+    "Id": "39fa6522-d071-4113-a9c1-d9d2a4d2a329",
     "Index": 70,
     "ShortName": "Yb",
     "ElementName": "Ytterbium",
@@ -1400,7 +1400,7 @@
     "YearDiscovered": "1878"
   },
   {
-    "Id": "0775dda3-e96f-47cb-9141-f07be25410f7",
+    "Id": "fd2d14b5-b1a5-4795-b461-0d8787d6a360",
     "Index": 71,
     "ShortName": "Lu",
     "ElementName": "Lutetium",
@@ -1420,7 +1420,7 @@
     "YearDiscovered": "1907"
   },
   {
-    "Id": "fea49f0f-5094-4099-8e59-6d34026d0773",
+    "Id": "4b513f8b-8803-4069-bcdf-5740c4deff25",
     "Index": 72,
     "ShortName": "Hf",
     "ElementName": "Hafnium",
@@ -1440,7 +1440,7 @@
     "YearDiscovered": "1923"
   },
   {
-    "Id": "b2be3c40-00d0-4787-829a-70b11a700d07",
+    "Id": "faa70e65-8830-4154-b172-bdbc2d62e908",
     "Index": 73,
     "ShortName": "Ta",
     "ElementName": "Tantalum",
@@ -1460,7 +1460,7 @@
     "YearDiscovered": "1802"
   },
   {
-    "Id": "529f8bce-8ee4-4aad-b5f5-c37cd61e16bc",
+    "Id": "abf42792-bb85-4a6b-a505-0ae15b0642ad",
     "Index": 74,
     "ShortName": "W",
     "ElementName": "Tungsten",
@@ -1480,7 +1480,7 @@
     "YearDiscovered": "1783"
   },
   {
-    "Id": "76b0b9fd-1e2b-4458-86b7-69905d5855c9",
+    "Id": "1bfbf08e-aa9e-465c-a8ca-36240887c40d",
     "Index": 75,
     "ShortName": "Re",
     "ElementName": "Rhenium",
@@ -1500,7 +1500,7 @@
     "YearDiscovered": "1925"
   },
   {
-    "Id": "60ee6eb0-9565-41fe-a859-a6d300a5f06d",
+    "Id": "54b4e0cb-9c20-4d97-bf8e-1c730465d6fc",
     "Index": 76,
     "ShortName": "Os",
     "ElementName": "Osmium",
@@ -1520,7 +1520,7 @@
     "YearDiscovered": "1803"
   },
   {
-    "Id": "490fd9be-7619-475a-9e4e-5955789d2767",
+    "Id": "b12ce3a4-7cd8-4f7a-92ff-5f913cd0e4f0",
     "Index": 77,
     "ShortName": "Ir",
     "ElementName": "Iridium",
@@ -1540,7 +1540,7 @@
     "YearDiscovered": "1803"
   },
   {
-    "Id": "d381c0dc-36ac-4153-bbb4-bdbeec50d0d6",
+    "Id": "6fcfd7e4-19a7-4f32-9b7f-067d76becb72",
     "Index": 78,
     "ShortName": "Pt",
     "ElementName": "Platinum",
@@ -1560,7 +1560,7 @@
     "YearDiscovered": "1735"
   },
   {
-    "Id": "2a0f8005-e412-4681-abc7-14c5505c0d61",
+    "Id": "c4d82044-d17b-4bcb-b0c6-f41851477585",
     "Index": 79,
     "ShortName": "Au",
     "ElementName": "Gold",
@@ -1580,7 +1580,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "3b7ec24c-34f2-4f9a-b091-daf866e3477c",
+    "Id": "37526d31-e704-4250-80de-32339f09cfc6",
     "Index": 80,
     "ShortName": "Hg",
     "ElementName": "Mercury",
@@ -1600,7 +1600,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "ffb3fc30-f5d9-4688-8188-d2dc230c28b8",
+    "Id": "b4ac9024-1d9e-458a-9ac5-f4610d422963",
     "Index": 81,
     "ShortName": "Tl",
     "ElementName": "Thallium",
@@ -1620,7 +1620,7 @@
     "YearDiscovered": "1861"
   },
   {
-    "Id": "22130b26-79c4-4e87-8c57-feed5e2696b7",
+    "Id": "83921c67-5899-4dfa-84c8-182350fa29e2",
     "Index": 82,
     "ShortName": "Pb",
     "ElementName": "Lead",
@@ -1640,7 +1640,7 @@
     "YearDiscovered": "Ancient"
   },
   {
-    "Id": "f4a6d602-4ece-4bf6-a425-7e4461ed27d4",
+    "Id": "d2d67ade-cb00-48df-bf8b-f8718f968c5e",
     "Index": 83,
     "ShortName": "Bi",
     "ElementName": "Bismuth",
@@ -1660,7 +1660,7 @@
     "YearDiscovered": "1753"
   },
   {
-    "Id": "e20e3286-300c-43fa-a593-90ae803b03ba",
+    "Id": "533f2a09-c973-4755-983b-545f83188a94",
     "Index": 84,
     "ShortName": "Po",
     "ElementName": "Polonium",
@@ -1680,7 +1680,7 @@
     "YearDiscovered": "1898"
   },
   {
-    "Id": "32979834-9f80-4ca2-8d22-2802ffe6b234",
+    "Id": "bb6255e5-67c0-4456-99d1-13cbfee2a418",
     "Index": 85,
     "ShortName": "At",
     "ElementName": "Astatine",
@@ -1700,7 +1700,7 @@
     "YearDiscovered": "1940"
   },
   {
-    "Id": "6dfc3ebc-0f1b-4ee8-b31f-45d1c2693c08",
+    "Id": "14190b31-69d7-4c9c-a710-faf8a441eb0d",
     "Index": 86,
     "ShortName": "Rn",
     "ElementName": "Radon",
@@ -1720,7 +1720,7 @@
     "YearDiscovered": "1900"
   },
   {
-    "Id": "730e6a77-9b15-485e-9cf3-deda1d7af4e4",
+    "Id": "686f5f0b-069c-44b5-9365-8b95dd627fe0",
     "Index": 87,
     "ShortName": "Fr",
     "ElementName": "Francium",
@@ -1740,7 +1740,7 @@
     "YearDiscovered": "1939"
   },
   {
-    "Id": "f2b6b091-3ebc-4476-a657-ceafcdc87516",
+    "Id": "9c1c8f3e-25de-4178-8221-7f4d1f09e794",
     "Index": 88,
     "ShortName": "Ra",
     "ElementName": "Radium",
@@ -1760,7 +1760,7 @@
     "YearDiscovered": "1898"
   },
   {
-    "Id": "21791ead-359c-4c7e-b081-6be97cd4770d",
+    "Id": "306f54d6-4599-4176-b672-758ce40e3a56",
     "Index": 89,
     "ShortName": "Ac",
     "ElementName": "Actinium",
@@ -1780,7 +1780,7 @@
     "YearDiscovered": "1899"
   },
   {
-    "Id": "aaf562e3-27aa-45c7-ab6b-875ba1ae3dcd",
+    "Id": "4e0fb596-da6c-44c2-8dd7-bcc9ae9b7e71",
     "Index": 90,
     "ShortName": "Th",
     "ElementName": "Thorium",
@@ -1800,7 +1800,7 @@
     "YearDiscovered": "1828"
   },
   {
-    "Id": "b9e935ab-53d5-447e-9c75-2f3490f3375b",
+    "Id": "bb8e5c6d-da32-42dd-b6f6-5dee015ee8b3",
     "Index": 91,
     "ShortName": "Pa",
     "ElementName": "Protactinium",
@@ -1820,7 +1820,7 @@
     "YearDiscovered": "1913"
   },
   {
-    "Id": "9e85766c-41eb-40be-abf0-76d9225c9341",
+    "Id": "27bad6a7-389b-4b2c-bd5a-a2ee895f31dd",
     "Index": 92,
     "ShortName": "U",
     "ElementName": "Uranium",
@@ -1840,7 +1840,7 @@
     "YearDiscovered": "1789"
   },
   {
-    "Id": "d2e0cfc8-2510-460a-a53e-26405b8165d6",
+    "Id": "cdcf4605-c58a-4968-80b4-186f23159559",
     "Index": 93,
     "ShortName": "Np",
     "ElementName": "Neptunium",
@@ -1860,7 +1860,7 @@
     "YearDiscovered": "1940"
   },
   {
-    "Id": "67774e12-3f47-4d06-968e-bf4b6245f41d",
+    "Id": "f9f5b39b-875b-47fa-91b1-ac1bdc29e0be",
     "Index": 94,
     "ShortName": "Pu",
     "ElementName": "Plutonium",
@@ -1880,7 +1880,7 @@
     "YearDiscovered": "1940"
   },
   {
-    "Id": "f4c87447-0ff6-4b29-b6d7-f79241e91b47",
+    "Id": "bf851ca4-1463-4d2c-b2dc-8aeffe627e0d",
     "Index": 95,
     "ShortName": "Am",
     "ElementName": "Americium",
@@ -1900,7 +1900,7 @@
     "YearDiscovered": "1944"
   },
   {
-    "Id": "0de724c3-41cb-4b3a-b466-fde05597efb7",
+    "Id": "64e5b3fc-14c3-4ed4-b2ac-89031aff4eee",
     "Index": 96,
     "ShortName": "Cm",
     "ElementName": "Curium",
@@ -1920,7 +1920,7 @@
     "YearDiscovered": "1944"
   },
   {
-    "Id": "bcb7e322-16c1-4bcb-928c-3b71d1f865bb",
+    "Id": "a74f3a4e-b5de-4983-88c0-abe5470426b6",
     "Index": 97,
     "ShortName": "Bk",
     "ElementName": "Berkelium",
@@ -1940,7 +1940,7 @@
     "YearDiscovered": "1949"
   },
   {
-    "Id": "23208ff8-aed9-4067-928e-8fe793d36254",
+    "Id": "8ccf0723-049a-4130-aa9d-d215865bf741",
     "Index": 98,
     "ShortName": "Cf",
     "ElementName": "Californium",
@@ -1960,7 +1960,7 @@
     "YearDiscovered": "1950"
   },
   {
-    "Id": "a3260675-dca8-42f9-8de3-1407b94efe6d",
+    "Id": "d932f5f2-12ed-4655-8d97-2f0ec870f431",
     "Index": 99,
     "ShortName": "Es",
     "ElementName": "Einsteinium",
@@ -1980,7 +1980,7 @@
     "YearDiscovered": "1952"
   },
   {
-    "Id": "86d4b832-e470-49f0-acf9-ab24b4ebc29a",
+    "Id": "bb136f42-b118-457b-ac9e-b190cbac226e",
     "Index": 100,
     "ShortName": "Fm",
     "ElementName": "Fermium",
@@ -2000,7 +2000,7 @@
     "YearDiscovered": "1952"
   },
   {
-    "Id": "86e6ea3f-7852-4c5f-9560-3d2368af3bce",
+    "Id": "89be11a9-e897-47dc-b2e7-908326bbe458",
     "Index": 101,
     "ShortName": "Md",
     "ElementName": "Mendelevium",
@@ -2020,7 +2020,7 @@
     "YearDiscovered": "1955"
   },
   {
-    "Id": "76c72770-8e76-4468-8bbe-468b0f1be670",
+    "Id": "cd937ed0-679c-4bc7-ae62-853d71df9095",
     "Index": 102,
     "ShortName": "No",
     "ElementName": "Nobelium",
@@ -2040,7 +2040,7 @@
     "YearDiscovered": "1957"
   },
   {
-    "Id": "2ce8af39-e221-459c-b845-80e8b0064958",
+    "Id": "e3dbf237-7705-4aa5-a7ce-e4dee951575c",
     "Index": 103,
     "ShortName": "Lr",
     "ElementName": "Lawrencium",
@@ -2060,7 +2060,7 @@
     "YearDiscovered": "1961"
   },
   {
-    "Id": "08de3889-7e82-4d6f-82ee-f2c24bd8d0fd",
+    "Id": "fac9102e-db4a-4c0e-8d4e-ca38bfc26e86",
     "Index": 104,
     "ShortName": "Rf",
     "ElementName": "Rutherfordium",
@@ -2080,7 +2080,7 @@
     "YearDiscovered": "1964"
   },
   {
-    "Id": "d5ee9417-7d99-4add-ac87-5d088caf5de3",
+    "Id": "cd14d24e-7d66-430c-a328-6108669c8e59",
     "Index": 105,
     "ShortName": "Db",
     "ElementName": "Dubnium",
@@ -2100,7 +2100,7 @@
     "YearDiscovered": "1967"
   },
   {
-    "Id": "89528e2f-4b61-4d9f-ade8-eb11bf072665",
+    "Id": "6a2e5a0d-f6ac-4a72-a810-a70995664306",
     "Index": 106,
     "ShortName": "Sg",
     "ElementName": "Seaborgium",
@@ -2120,7 +2120,7 @@
     "YearDiscovered": "1974"
   },
   {
-    "Id": "411c4c21-52ac-47c8-828e-640cb8215941",
+    "Id": "f44e96bb-ba46-4b5d-95b5-3e7ffc05f307",
     "Index": 107,
     "ShortName": "Bh",
     "ElementName": "Bohrium",
@@ -2140,7 +2140,7 @@
     "YearDiscovered": "1976"
   },
   {
-    "Id": "3b16f267-a093-4565-ab5a-0f59a9a6f537",
+    "Id": "80dc3058-748d-49e1-816c-b0c2463e9a5a",
     "Index": 108,
     "ShortName": "Hs",
     "ElementName": "Hassium",
@@ -2160,7 +2160,7 @@
     "YearDiscovered": "1984"
   },
   {
-    "Id": "7663cbb7-0a09-4d0a-b300-69d43b5cd65f",
+    "Id": "cb5718c6-5559-4c1d-aa2e-4e7e4663d634",
     "Index": 109,
     "ShortName": "Mt",
     "ElementName": "Meitnerium",
@@ -2180,7 +2180,7 @@
     "YearDiscovered": "1982"
   },
   {
-    "Id": "7f15fbca-117e-4c61-9a1a-42743373859e",
+    "Id": "cf143c63-f8d5-46e7-83b9-27e8f882238d",
     "Index": 110,
     "ShortName": "Ds",
     "ElementName": "Darmstadtium",
@@ -2200,7 +2200,7 @@
     "YearDiscovered": "1994"
   },
   {
-    "Id": "5ec07562-fe02-4a6f-b227-aed7d0baddce",
+    "Id": "7add8d37-9e99-4192-acb9-38c8543bfc46",
     "Index": 111,
     "ShortName": "Rg",
     "ElementName": "Roentgenium",
@@ -2220,7 +2220,7 @@
     "YearDiscovered": "1994"
   },
   {
-    "Id": "9532d40c-27ce-451b-8b4f-93ca3903bfe4",
+    "Id": "acc71f30-0830-4b17-b080-6ee3c46ddf1b",
     "Index": 112,
     "ShortName": "Cn",
     "ElementName": "Copernicium",
@@ -2240,7 +2240,7 @@
     "YearDiscovered": "1996"
   },
   {
-    "Id": "e94d27af-8c87-4b91-a4cb-596115a3fb2f",
+    "Id": "2add34b7-7c88-4a2a-8e76-99194cc949ab",
     "Index": 113,
     "ShortName": "Nh",
     "ElementName": "Nihonium",
@@ -2260,7 +2260,7 @@
     "YearDiscovered": "2004"
   },
   {
-    "Id": "46ff239c-d6f3-4520-9eaa-d596df33e84b",
+    "Id": "aab8be42-1645-4a50-8b8a-92aa0f910f8b",
     "Index": 114,
     "ShortName": "Fl",
     "ElementName": "Flerovium",
@@ -2280,7 +2280,7 @@
     "YearDiscovered": "1998"
   },
   {
-    "Id": "e8908d8a-0db4-4f30-ac9d-0b822e9e903e",
+    "Id": "08c153f6-ca2a-4dc9-a7ad-9b37eeddb01c",
     "Index": 115,
     "ShortName": "Mc",
     "ElementName": "Moscovium",
@@ -2300,7 +2300,7 @@
     "YearDiscovered": "2003"
   },
   {
-    "Id": "b660ac5a-e3bb-473d-adef-09727416a90d",
+    "Id": "ff8e1867-8a1d-4ec4-b60e-085f8bcc2320",
     "Index": 116,
     "ShortName": "Lv",
     "ElementName": "Livermorium",
@@ -2320,7 +2320,7 @@
     "YearDiscovered": "2000"
   },
   {
-    "Id": "664b2077-627b-4ba4-bae3-bda223d6d360",
+    "Id": "46e716fb-e3fb-47ae-bc60-343f70a2aae3",
     "Index": 117,
     "ShortName": "Ts",
     "ElementName": "Tennessine",
@@ -2340,7 +2340,7 @@
     "YearDiscovered": "2010"
   },
   {
-    "Id": "a538c4c2-04e8-4076-8c5d-de4823d93c8f",
+    "Id": "23c76b43-b316-49e5-b13d-b314f580d7f9",
     "Index": 118,
     "ShortName": "Og",
     "ElementName": "Oganesson",

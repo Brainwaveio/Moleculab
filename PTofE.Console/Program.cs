@@ -1,4 +1,5 @@
 ﻿using PTofE.Core.JSONConvertor;
+using PTofE.Core.Services;
 
 public class Program
 {
@@ -8,10 +9,22 @@ public class Program
 
 		var tesst = Environment.CurrentDirectory;
 
-		var test = new JsonConverter();
-		await test.ConvertToJsonFileAsync(
-			"F:\\Projects\\src\\PeriodicTableOfElements\\PTofE.Console\\Input\\PubChemElements_all.json",
-			"F:\\Projects\\src\\PeriodicTableOfElements\\PTofE.Console\\Output\\PubChemElements_all.json");
+		var t = new ElementService();
+
+		var te = await t.GetAllAsync();
+
+		foreach (var item in te)
+		{
+			Console.WriteLine(item.Index);
+			Console.WriteLine(item.ShortName);
+		}
+
+		Console.WriteLine(te);
+
+		//var test = new JsonConverter();
+		//await test.ConvertToJsonFileAsync(
+		//	"F:\\Projects\\src\\PeriodicTableOfElements\\PTofE.Console\\Input\\PubChemElements_all.json",
+		//	"F:\\Projects\\src\\PeriodicTableOfElements\\PTofE.Console\\Output\\PubChemElements_all.json");
 
 		Console.ReadLine();
 	}
