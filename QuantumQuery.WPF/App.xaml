@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:QuantumQuery.WPF"
              xmlns:view="clr-namespace:QuantumQuery.WPF.MVVM.View"
              xmlns:vms="clr-namespace:QuantumQuery.WPF.MVVM.ViewModel"
-             StartupUri="/MVVM/View/MainWindow.xaml">
+             >
+             <!-- StartupUri="/MVVM/View/MainWindow.xaml" -->
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>

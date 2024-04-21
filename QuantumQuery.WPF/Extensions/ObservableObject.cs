@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 
 namespace QuantumQuery.WPF.Extensions
 {
-	internal class ObservableObject : INotifyPropertyChanged
+	public class ObservableObject : INotifyPropertyChanged
 	{
 		public event PropertyChangedEventHandler? PropertyChanged;
 

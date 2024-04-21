@@ -1,8 +1,9 @@
-﻿using QuantumQuery.WPF.Extensions;
+﻿using QuantumQuery.Core.Interfaces;
+using QuantumQuery.WPF.Extensions;
 
 namespace QuantumQuery.WPF.MVVM.ViewModel
 {
-	internal class MainWindowModel : ObservableObject
+	public class MainWindowModel : ObservableObject
 	{
 		public RelayCommand ShowLeftSideBar;
 
@@ -20,9 +21,9 @@ namespace QuantumQuery.WPF.MVVM.ViewModel
 			}
 		}
 
-		public MainWindowModel()
+		public MainWindowModel(IElementService elementService)
 		{ 
-			LeftSideBarVM = new LeftSideBarModel();
+			LeftSideBarVM = new LeftSideBarModel(elementService);
 			CurrentView = LeftSideBarVM;
 		}
 	}

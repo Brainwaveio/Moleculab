@@ -1,21 +1,35 @@
 ﻿using QuantumQuery.Core.DTOs;
+using QuantumQuery.Core.Interfaces;
 using QuantumQuery.WPF.Extensions;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace QuantumQuery.WPF.MVVM.ViewModel
 {
-	internal class LeftSideBarModel : ObservableObject
+	public class LeftSideBarModel : ObservableObject
 	{
-		public ObservableCollection<ElementDto> Elements { get; set; }
+		public ObservableCollection<ElementDto> Elements { get; set; } = new ObservableCollection<ElementDto>();
+		private readonly IElementService _elementService;
 
-		public LeftSideBarModel() 
+		public LeftSideBarModel(IElementService elementService)
 		{
-			ViewAllElement();
+			_elementService = elementService;
 		}
 
-		private void ViewAllElement()
+		public async Task InitializeAsync()
 		{
-			Elements = new ObservableCollection<ElementDto>();
+			try
+			{
+				var result = await _elementService.GetAllAsync();
+				foreach (var element in result)
+				{
+					Elements.Add(element);
+				}
+			}
+			catch (System.Exception)
+			{
+				throw;
+			}
 		}
 	}
 }

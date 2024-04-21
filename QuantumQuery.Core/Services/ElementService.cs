@@ -16,7 +16,7 @@ namespace QuantumQuery.Core.Services
 
 			_filePath = Path.Combine(
 				Directory.GetParent(directoryInfo.FullName).FullName,
-				"PTofE.Core",
+				"QuantumQuery.Core",
 				"JSONs",
 				"PubChemElements_all.json");
 		}
