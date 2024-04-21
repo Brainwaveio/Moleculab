@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="quantumquery.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\QuantumQuery.Core\QuantumQuery.Core.csproj" />
   </ItemGroup>
 

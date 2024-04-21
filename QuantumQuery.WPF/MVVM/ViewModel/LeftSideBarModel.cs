@@ -10,6 +10,12 @@ namespace QuantumQuery.WPF.MVVM.ViewModel
 
 		public LeftSideBarModel() 
 		{
+			ViewAllElement();
+		}
+
+		private void ViewAllElement()
+		{
+			Elements = new ObservableCollection<ElementDto>();
 		}
 	}
 }
