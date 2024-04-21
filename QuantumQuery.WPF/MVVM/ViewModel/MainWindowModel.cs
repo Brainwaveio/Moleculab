@@ -1,5 +1,5 @@
-﻿using QuantumQuery.Core.Interfaces;
-using QuantumQuery.WPF.Extensions;
+﻿using QuantumQuery.WPF.Extensions;
+using System;
 
 namespace QuantumQuery.WPF.MVVM.ViewModel
 {
@@ -21,9 +21,9 @@ namespace QuantumQuery.WPF.MVVM.ViewModel
 			}
 		}
 
-		public MainWindowModel(IElementService elementService)
+		public MainWindowModel(LeftSideBarModel leftSideBarVM)
 		{ 
-			LeftSideBarVM = new LeftSideBarModel(elementService);
+			LeftSideBarVM = leftSideBarVM ?? throw new ArgumentNullException(nameof(leftSideBarVM));
 			CurrentView = LeftSideBarVM;
 		}
 	}

@@ -11,6 +11,7 @@
         mc:Ignorable="d"
         Title="QuantumQuery" Height="900" Width="1600">
 
+
     <Grid Background="#1e1e1e">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" MinWidth="300"/>

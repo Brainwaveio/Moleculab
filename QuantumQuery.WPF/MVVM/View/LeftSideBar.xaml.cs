@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using QuantumQuery.WPF.MVVM.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,10 @@ namespace QuantumQuery.WPF.MVVM.View
 	/// </summary>
 	public partial class LeftSideBar : UserControl
 	{
-		public LeftSideBar()
+		public LeftSideBar(LeftSideBarModel viewModel)
 		{
 			InitializeComponent();
+			DataContext = viewModel;
 		}
 	}
 }

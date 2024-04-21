@@ -27,6 +27,9 @@ namespace QuantumQuery.WPF
 			services.AddSingleton<MainWindowModel>();
 			services.AddTransient<LeftSideBarModel>();
 
+			services.AddTransient<LeftSideBar>(provider =>
+				new LeftSideBar(provider.GetRequiredService<LeftSideBarModel>()));
+
 			services.AddSingleton<MainWindow>(provider =>
 				new MainWindow(provider.GetRequiredService<MainWindowModel>()));
 		}
