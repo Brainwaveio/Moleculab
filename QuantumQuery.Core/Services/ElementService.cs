@@ -19,9 +19,6 @@ namespace QuantumQuery.Core.Services
 				"PTofE.Core",
 				"JSONs",
 				"PubChemElements_all.json");
-			//F:\Projects\src\PeriodicTableOfElements\PTofE.Core\JSONs\PubChemElements_all.json
-
-			//_filePath = "F:\\Projects\\src\\PeriodicTableOfElements\\PTofE.Core\\JSONs\\PubChemElements_all.json";
 		}
 
 		public async Task<List<ElementDto>> GetAllAsync()

@@ -8,13 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-	<ProjectReference Include="..\PTofE.Core.JSONConvertor\QuantumQuery.Core.JSONConvertor.csproj" />
-    <ProjectReference Include="..\PTofE.Core\QuantumQuery.Core.csproj" />
+    <Folder Include="Input\" />
+    <Folder Include="Output\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Input\" />
-    <Folder Include="Output\" />
+    <ProjectReference Include="..\QuantumQuery.Core.JSONConvertor\QuantumQuery.Core.JSONConvertor.csproj" />
+    <ProjectReference Include="..\QuantumQuery.Core\QuantumQuery.Core.csproj" />
   </ItemGroup>
 
 </Project>
