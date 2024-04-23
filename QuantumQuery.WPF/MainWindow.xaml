@@ -7,7 +7,10 @@
         mc:Ignorable="d"
         Icon="quantumquery.ico"
         Title="QuantumQuery" Height="900" Width="1600">
-    <Grid>
 
+    <Grid>
+        <TextBlock VerticalAlignment="Top" Width="250" Height="40" Text="{Binding BoundText}" />
+        <Button Click="ButtonTest" Width="80" Height="40" />
+        <ListView VerticalAlignment="Bottom" Width="300" Height="300" ItemsSource="{Binding Entries}" />
     </Grid>
 </Window>
