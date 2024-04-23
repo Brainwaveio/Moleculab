@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.JSONConve
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.WPF", "QuantumQuery.WPF\QuantumQuery.WPF.csproj", "{5D7084D4-623A-41AA-A182-667DBBD86E04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.DAl.LiteDB", "QuantumQuery.DAl.LiteDB\QuantumQuery.DAl.LiteDB.csproj", "{D259053B-1279-48C8-A78A-72E81085C67A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.Core.LiteDB", "QuantumQuery.Core.LiteDB\QuantumQuery.Core.LiteDB.csproj", "{9981F97B-6654-4999-9172-8D237E4455E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +39,14 @@ Global
 		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D259053B-1279-48C8-A78A-72E81085C67A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D259053B-1279-48C8-A78A-72E81085C67A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D259053B-1279-48C8-A78A-72E81085C67A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D259053B-1279-48C8-A78A-72E81085C67A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9981F97B-6654-4999-9172-8D237E4455E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9981F97B-6654-4999-9172-8D237E4455E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9981F97B-6654-4999-9172-8D237E4455E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9981F97B-6654-4999-9172-8D237E4455E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
