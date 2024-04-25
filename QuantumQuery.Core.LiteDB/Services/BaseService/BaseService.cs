@@ -12,8 +12,30 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			_databasePath = databasePath;
 		}
 
+		private async Task<bool> EnsureConnection()
+		{
+			return await Task.Run(() =>
+			{
+				try
+				{
+					using (var db = new LiteDatabase(_databasePath))
+					{
+						var collection = db.GetCollection<T>();
+						return collection.FindOne(_ => true) != null;
+					}
+				}
+				catch (Exception)
+				{
+					return false;
+				}
+			});
+		}
+
 		public async Task<List<T>> GetAllAsync()
 		{
+			if (!await EnsureConnection())
+				throw new InvalidOperationException("Unable to connect to the database.");
+
 			return await Task.Run(() =>
 			{
 				using (var db = new LiteDatabase(_databasePath))
@@ -26,6 +48,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 		public async Task<T> GetByIdAsync(Guid id)
 		{
+			if (!await EnsureConnection())
+				throw new InvalidOperationException("Unable to connect to the database.");
+
 			return await Task.Run(() =>
 			{
 				using (var db = new LiteDatabase(_databasePath))
@@ -38,6 +63,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 		public async Task<bool> UpdateAsync(T item)
 		{
+			if (!await EnsureConnection())
+				throw new InvalidOperationException("Unable to connect to the database.");
+
 			return await Task.Run(() =>
 			{
 				using (var db = new LiteDatabase(_databasePath))
@@ -50,6 +78,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 		public async Task<BsonValue> InsertAsync(T item)
 		{
+			if (!await EnsureConnection())
+				throw new InvalidOperationException("Unable to connect to the database.");
+
 			return await Task.Run(() =>
 			{
 				using (var db = new LiteDatabase(_databasePath))
@@ -62,6 +93,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 		public async Task<bool> UpdateOrInsertAsync(T item)
 		{
+			if (!await EnsureConnection())
+				throw new InvalidOperationException("Unable to connect to the database.");
+
 			return await Task.Run(() =>
 			{
 				using (var db = new LiteDatabase(_databasePath))
@@ -74,6 +108,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 		public async Task<bool> DeleteAsync(Guid id)
 		{
+			if (!await EnsureConnection())
+				throw new InvalidOperationException("Unable to connect to the database.");
+
 			return await Task.Run(() =>
 			{
 				using (var db = new LiteDatabase(_databasePath))
