@@ -12,7 +12,7 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			_databasePath = databasePath;
 		}
 
-		public async Task<List<T>> GetAll()
+		public async Task<List<T>> GetAllAsync()
 		{
 			return await Task.Run(() =>
 			{
@@ -24,7 +24,7 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			});
 		}
 
-		public async Task<T> GetById(Guid id)
+		public async Task<T> GetByIdAsync(Guid id)
 		{
 			return await Task.Run(() =>
 			{
@@ -36,7 +36,7 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			});
 		}
 
-		public async Task<bool> Update(T item)
+		public async Task<bool> UpdateAsync(T item)
 		{
 			return await Task.Run(() =>
 			{
@@ -48,7 +48,7 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			});
 		}
 
-		public async Task<BsonValue> Insert(T item)
+		public async Task<BsonValue> InsertAsync(T item)
 		{
 			return await Task.Run(() =>
 			{
@@ -60,7 +60,7 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			});
 		}
 
-		public async Task<bool> UpdateOrInsert(T item)
+		public async Task<bool> UpdateOrInsertAsync(T item)
 		{
 			return await Task.Run(() =>
 			{
@@ -72,7 +72,7 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			});
 		}
 
-		public async Task<bool> Delete(Guid id)
+		public async Task<bool> DeleteAsync(Guid id)
 		{
 			return await Task.Run(() =>
 			{
