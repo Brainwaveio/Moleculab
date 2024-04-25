@@ -7,6 +7,7 @@ public class Program
 {
 	private static async Task Main(string[] args)
 	{
+		DotNetEnv.Env.Load();
 		Console.WriteLine("Hello, World!");
 
 		////var tesst = Environment.CurrentDirectory;
@@ -23,49 +24,45 @@ public class Program
 
 		//Console.WriteLine(te);
 
-		var directoryInfo = Directory.GetParent(Environment.CurrentDirectory);
-		directoryInfo = Directory.GetParent(directoryInfo.FullName);
-		directoryInfo = Directory.GetParent(directoryInfo.FullName);
+		//string databasePath = "myTestDb.db";
+		//var elementService = new QuantumQuery.Core.LiteDB.Services.TestElementService(databasePath);
 
-		var databasePath = Path.Combine(
-				Directory.GetParent(directoryInfo.FullName).FullName,
-				"Database.LiteDB");
-		var service = new BaseService<Element>(databasePath);
+		//// Створення нового елемента
+		//var newElement = new Element
+		//{
+		//	Id = Guid.NewGuid(),
+		//	ElementName = "Neon",
+		//	AtomicMass = 20.180f,
+		//	CPKHexColor = "dfsgf",
+		//	GroupBlock = "ds",
+		//	Index = 1,
+		//	ShortName = "H",
+		//};
 
-		// Тестування вставки
-		var newElement = new Element
-		{
-			Id = Guid.NewGuid(),
-			ElementName = "Hydrogen",
-			AtomicMass = 1.008f,
-			CPKHexColor = "wdff",
-			GroupBlock = "dfg",
-			Index = 0,
-			ShortName = "H",
-		};
-		await service.Insert(newElement);
-		Console.WriteLine("Element inserted.");
+		//// Вставка елемента
+		//await elementService.Insert(newElement);
+		//Console.WriteLine($"Element inserted: {newElement.ElementName}");
 
-		// Тестування зчитування
-		var fetchedElement = await service.GetById(newElement.Id);
-		Console.WriteLine($"Element fetched: {fetchedElement.ElementName}");
+		//// Оновлення елемента
+		//newElement.ElementName = "Modified Neon";
+		//await elementService.Update(newElement);
+		//Console.WriteLine($"Element updated: {newElement.ElementName}");
 
-		// Тестування оновлення
-		fetchedElement.ElementName = "Deuterium";
-		bool updateResult = await service.Update(fetchedElement);
-		Console.WriteLine($"Element updated: {updateResult}");
+		//// Отримання елемента
+		//var element = await elementService.GetById(newElement.Id);
+		//Console.WriteLine($"Retrieved Element: {element.ElementName}");
 
-		// Перевірка оновлення
-		var updatedElement = await service.GetById(newElement.Id);
-		Console.WriteLine($"Updated Element: {updatedElement.ElementName}");
+		//// Видалення елемента
+		//await elementService.Delete("");
+		//Console.WriteLine("Element deleted");
 
-		// Тестування видалення
-		bool deleteResult = await service.Delete(newElement.Id);
-		Console.WriteLine($"Element deleted: {deleteResult}");
-
-		// Перевірка видалення
-		var deletedElement = await service.GetById(newElement.Id);
-		Console.WriteLine($"Element after deletion: {deletedElement?.ElementName ?? "Not found"}");
+		//// Отримання всіх елементів
+		//var allElements = await elementService.GetAll();
+		//Console.WriteLine("All elements:");
+		//foreach (var elem in allElements)
+		//{
+		//	Console.WriteLine($"Element: {elem.ElementName}");
+		//}
 
 		//var test = new JsonConverter();
 		//await test.ConvertToJsonFileAsync(
