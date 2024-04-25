@@ -24,11 +24,18 @@ namespace QuantumQuery.WPF
 		private void OnApplicationExit(object sender, ExitEventArgs e)
 		{
 			var directoryInfo = Directory.GetParent(Environment.CurrentDirectory);
-			directoryInfo = Directory.GetParent(directoryInfo.FullName);
-			directoryInfo = Directory.GetParent(directoryInfo.FullName);
+
+			directoryInfo = Directory.GetParent(directoryInfo?.FullName
+				?? throw new ArgumentNullException("Directory path can not be null"));
+
+			directoryInfo = Directory.GetParent(directoryInfo?.FullName
+				?? throw new ArgumentNullException("Directory path can not be null"));
 
 			var scriptPath = Path.Combine(
-				Directory.GetParent(directoryInfo.FullName).FullName,
+				Directory.GetParent(
+					directoryInfo?.FullName 
+					?? throw new ArgumentNullException("Directory path can not be null"))?.FullName
+					?? throw new ArgumentNullException("Directory path can not be null"),
 				"PowerShell",
 				"StopDatabase.ps1");
 

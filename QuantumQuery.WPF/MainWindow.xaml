@@ -30,7 +30,7 @@
                 <MenuItem Header="Cut"/>
                 <MenuItem Header="Copy"/>
                 <MenuItem Header="Paste"/>
-                <MenuItem Header="Show ClipBoard History"/>
+                <MenuItem Header="Show Clipboard History"/>
                 <MenuItem Header="Duplicate"/>
                 <MenuItem Header="Delete"/>
                 <Separator/>
