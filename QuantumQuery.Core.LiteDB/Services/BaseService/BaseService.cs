@@ -18,11 +18,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 			{
 				try
 				{
-					using (var db = new LiteDatabase(_databasePath))
-					{
-						var collection = db.GetCollection<T>();
-						return collection.FindOne(_ => true) != null;
-					}
+					using var db = new LiteDatabase(_databasePath);
+
+					return db.GetCollection<T>().FindOne(_ => true) != null;
 				}
 				catch (Exception)
 				{
@@ -38,11 +36,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 			return await Task.Run(() =>
 			{
-				using (var db = new LiteDatabase(_databasePath))
-				{
-					var collection = db.GetCollection<T>();
-					return new List<T>(collection.FindAll());
-				}
+				using var db = new LiteDatabase(_databasePath);
+
+				return new List<T>(db.GetCollection<T>().FindAll());
 			});
 		}
 
@@ -53,11 +49,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 			return await Task.Run(() =>
 			{
-				using (var db = new LiteDatabase(_databasePath))
-				{
-					var collection = db.GetCollection<T>();
-					return collection.FindById(new BsonValue(id));
-				}
+				using var db = new LiteDatabase(_databasePath);
+
+				return db.GetCollection<T>().FindById(new BsonValue(id));
 			});
 		}
 
@@ -68,11 +62,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 			return await Task.Run(() =>
 			{
-				using (var db = new LiteDatabase(_databasePath))
-				{
-					var collection = db.GetCollection<T>();
-					return collection.Update(item);
-				}
+				using var db = new LiteDatabase(_databasePath);
+
+				return db.GetCollection<T>().Update(item);
 			});
 		}
 
@@ -83,11 +75,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 			return await Task.Run(() =>
 			{
-				using (var db = new LiteDatabase(_databasePath))
-				{
-					var collection = db.GetCollection<T>();
-					return collection.Insert(item);
-				}
+				using var db = new LiteDatabase(_databasePath);
+
+				return db.GetCollection<T>().Insert(item);
 			});
 		}
 
@@ -98,11 +88,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 			return await Task.Run(() =>
 			{
-				using (var db = new LiteDatabase(_databasePath))
-				{
-					var collection = db.GetCollection<T>();
-					return collection.Upsert(item);
-				}
+				using var db = new LiteDatabase(_databasePath);
+
+				return db.GetCollection<T>().Upsert(item);
 			});
 		}
 
@@ -113,11 +101,9 @@ namespace QuantumQuery.Core.LiteDB.Services.BaseService
 
 			return await Task.Run(() =>
 			{
-				using (var db = new LiteDatabase(_databasePath))
-				{
-					var collection = db.GetCollection<T>();
-					return collection.Delete(new BsonValue(id));
-				}
+				using var db = new LiteDatabase(_databasePath);
+
+				return db.GetCollection<T>().Delete(new BsonValue(id));
 			});
 		}
 	}
