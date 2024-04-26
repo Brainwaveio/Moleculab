@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core", "Quantu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.JSONConvertor", "QuantumQuery.Core.JSONConvertor\QuantumQuery.Core.JSONConvertor.csproj", "{BD65B090-5B85-4B7C-BF1E-70DD92853955}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.WPF", "QuantumQuery.WPF\QuantumQuery.WPF.csproj", "{5D7084D4-623A-41AA-A182-667DBBD86E04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.WPF", "QuantumQuery.WPF\QuantumQuery.WPF.csproj", "{5D7084D4-623A-41AA-A182-667DBBD86E04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.DAl.LiteDB", "QuantumQuery.DAl.LiteDB\QuantumQuery.DAl.LiteDB.csproj", "{D259053B-1279-48C8-A78A-72E81085C67A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.DAl.LiteDB", "QuantumQuery.DAl.LiteDB\QuantumQuery.DAl.LiteDB.csproj", "{D259053B-1279-48C8-A78A-72E81085C67A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.Core.LiteDB", "QuantumQuery.Core.LiteDB\QuantumQuery.Core.LiteDB.csproj", "{9981F97B-6654-4999-9172-8D237E4455E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.LiteDB", "QuantumQuery.Core.LiteDB\QuantumQuery.Core.LiteDB.csproj", "{9981F97B-6654-4999-9172-8D237E4455E7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteDB", "LiteDB", "{C4E45F06-82FD-4A07-B389-48BBF6B41DED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{0B13E89E-3672-4296-953B-E4B46A7FE4B8} = {9E975153-48FC-40A4-972C-24912C98A3AA}
+		{D259053B-1279-48C8-A78A-72E81085C67A} = {C4E45F06-82FD-4A07-B389-48BBF6B41DED}
+		{9981F97B-6654-4999-9172-8D237E4455E7} = {C4E45F06-82FD-4A07-B389-48BBF6B41DED}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A1646D1C-FC94-4C86-848C-7B3E5879C65B}
