@@ -1,0 +1,20 @@
+CREATE TABLE [Elements] (
+    Id TEXT PRIMARY KEY,
+    Index INTEGER NOT NULL,
+    ShortName TEXT NOT NULL,
+    ElementName TEXT NOT NULL,
+    AtomicMass REAL NOT NULL,
+    CPKHexColor TEXT NOT NULL,
+    StandardState TEXT,
+    ElectronConfiguration TEXT,
+    OxidationStates TEXT,
+    Electronegativity REAL,
+    AtomicRadius INTEGER,
+    IonizationEnergy REAL,
+    ElectronAffinity REAL,
+    MeltingPoint REAL,
+    BoilingPoint REAL,
+    Density REAL,
+    GroupBlock TEXT NOT NULL,
+    YearDiscovered TEXT
+);
