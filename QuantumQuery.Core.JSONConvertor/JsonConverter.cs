@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using QuantumQuery.Core.JSONConvertor.Model;
-using QuantumQuery.Core.DTOs;
+using QuantumQuery.Core.SQLite.DTOs;
 using System.Globalization;
 
 namespace QuantumQuery.Core.JSONConvertor

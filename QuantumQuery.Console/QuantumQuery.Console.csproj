@@ -18,10 +18,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QuantumQuery.Core.JSONConvertor\QuantumQuery.Core.JSONConvertor.csproj" />
-    <ProjectReference Include="..\QuantumQuery.Core.LiteDB\QuantumQuery.Core.LiteDB.csproj" />
     <ProjectReference Include="..\QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj" />
     <ProjectReference Include="..\QuantumQuery.Core\QuantumQuery.Core.csproj" />
-    <ProjectReference Include="..\QuantumQuery.DAl.LiteDB\QuantumQuery.DAl.LiteDB.csproj" />
     <ProjectReference Include="..\QuantumQuery.DAL.SQLite\QuantumQuery.DAL.SQLite.csproj" />
   </ItemGroup>
 

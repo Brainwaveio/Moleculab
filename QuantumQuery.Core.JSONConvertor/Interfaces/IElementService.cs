@@ -1,6 +1,6 @@
-﻿using QuantumQuery.Core.DTOs;
+﻿using QuantumQuery.Core.SQLite.DTOs;
 
-namespace QuantumQuery.Core.Interfaces
+namespace QuantumQuery.Core.JSONConvertor.Interfaces
 {
 	public interface IElementService
 	{

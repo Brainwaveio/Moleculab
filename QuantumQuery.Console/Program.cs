@@ -1,8 +1,6 @@
 ﻿using QuantumQuery.Core.JSONConvertor;
-using QuantumQuery.Core.LiteDB.Services;
 using QuantumQuery.Core.Services;
 using QuantumQuery.Core.SQLite;
-using QuantumQuery.DAl.LiteDB.Model;
 using QuantumQuery.DAL.SQLite;
 
 public class Program

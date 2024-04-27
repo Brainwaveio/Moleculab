@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using QuantumQuery.Core.Interfaces;
-using QuantumQuery.Core.Services;
 
 namespace QuantumQuery.Core
 {
@@ -8,8 +6,6 @@ namespace QuantumQuery.Core
 	{
 		public static IServiceCollection AddCore(this IServiceCollection services)
 		{
-			services.AddTransient<IElementService, ElementService>();
-				
 			return services;
 		}
 	}

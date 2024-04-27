@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
-using QuantumQuery.Core.DTOs;
-using QuantumQuery.Core.Interfaces;
+using QuantumQuery.Core.JSONConvertor.Interfaces;
+using QuantumQuery.Core.SQLite.DTOs;
 
 namespace QuantumQuery.Core.Services
 {
