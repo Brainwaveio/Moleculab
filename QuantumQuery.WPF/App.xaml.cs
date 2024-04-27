@@ -2,6 +2,10 @@
 using System;
 using System.Windows;
 using System.IO;
+//using QuantumQuery.Core.SQLite;
+using Microsoft.Extensions.DependencyInjection;
+//using Serilog.Core;
+//using Serilog;
 
 namespace QuantumQuery.WPF
 {
@@ -10,8 +14,14 @@ namespace QuantumQuery.WPF
 	/// </summary>
 	public partial class App : Application
 	{
+		private IServiceProvider _serviceProvider;
+
 		public App()
 		{
+			var services = new ServiceCollection();
+			ConfigureServices(services);
+			_serviceProvider = services.BuildServiceProvider();
+
 			this.Exit += OnApplicationExit;
 		}
 
@@ -19,6 +29,20 @@ namespace QuantumQuery.WPF
 		{
 			base.OnStartup(e);
 			DotNetEnv.Env.Load();
+			
+			//TODO need to add logger
+			//var levelSwitch = new LoggingLevelSwitch();
+
+			//Log.Logger = new LoggerConfiguration()
+			//	.WriteTo.Seq("https://seq.example.com")
+			//	.CreateLogger();
+		}
+
+		private void ConfigureServices(IServiceCollection services)
+		{
+			Core.SQLite.DI.AddSQLiteCore(services);
+
+			services.AddAutoMapper(typeof(Core.SQLite.MapperConfig));
 		}
 
 		private void OnApplicationExit(object sender, ExitEventArgs e)
