@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteDB", "LiteDB", "{C4E45F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.DAL.SQLite", "QuantumQuery.DAL.SQLite\QuantumQuery.DAL.SQLite.csproj", "{4F60D966-7652-4AF2-9B6A-5184CC51D910}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.Core.SQLite", "QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj", "{023D27D1-D6BA-4B46-9DA1-F477CC51866E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{4F60D966-7652-4AF2-9B6A-5184CC51D910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F60D966-7652-4AF2-9B6A-5184CC51D910}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F60D966-7652-4AF2-9B6A-5184CC51D910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
