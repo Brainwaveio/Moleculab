@@ -2,6 +2,7 @@
 using QuantumQuery.Core.LiteDB.Services;
 using QuantumQuery.Core.Services;
 using QuantumQuery.DAl.LiteDB.Model;
+using QuantumQuery.DAL.SQLite;
 
 public class Program
 {
@@ -9,6 +10,8 @@ public class Program
 	{
 		DotNetEnv.Env.Load();
 		Console.WriteLine("Hello, World!");
+
+		DatabaseInitializer.InitializeDatabase();
 
 		////var tesst = Environment.CurrentDirectory;
 
