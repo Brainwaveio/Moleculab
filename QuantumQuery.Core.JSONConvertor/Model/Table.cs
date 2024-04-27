@@ -5,8 +5,8 @@ namespace QuantumQuery.Core.JSONConvertor.Model
 	internal class Table
 	{
 		[JsonProperty("Columns")]
-		public Columns Columns { get; set; }
+		public Columns? Columns { get; set; }
 		[JsonProperty("Row")]
-		public List<Row> Row { get; set; }
+		public List<Row>? Row { get; set; }
 	}
 }

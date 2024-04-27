@@ -19,10 +19,12 @@ namespace QuantumQuery.Core.JSONConvertor
 				return;
 			}
 
-			foreach (var row in tableStructure.Table.Row)
+			foreach (var row in tableStructure?.Table?.Row
+				?? throw new ArgumentNullException("Argument in JSON can not be null"))
 			{
 				var cells = row.Cell;
-				ElemntState elementState = ParseElementState(cells[11]);
+				ElemntState elementState = ParseElementState(cells?[11]
+					?? throw new ArgumentNullException("Argument in JSON can not be null"));
 
 				elements.Add(new()
 				{
