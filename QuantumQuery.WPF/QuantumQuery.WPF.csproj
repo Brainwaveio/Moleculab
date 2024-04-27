@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="QuantumQuery.ico" />
   </ItemGroup>
 
