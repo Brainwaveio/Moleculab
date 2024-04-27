@@ -11,11 +11,15 @@ namespace QuantumQuery.Core.Services
 		public ElementService()
 		{
 			var directoryInfo = Directory.GetParent(Environment.CurrentDirectory);
-			directoryInfo = Directory.GetParent(directoryInfo.FullName);
-			directoryInfo = Directory.GetParent(directoryInfo.FullName);
+			directoryInfo = Directory.GetParent(directoryInfo?.FullName
+				?? throw new ArgumentNullException("Directory path can not be null"));
+			directoryInfo = Directory.GetParent(directoryInfo?.FullName
+				?? throw new ArgumentNullException("Directory path can not be null"));
 
 			_filePath = Path.Combine(
-				Directory.GetParent(directoryInfo.FullName).FullName,
+				Directory.GetParent(directoryInfo?.FullName
+					?? throw new ArgumentNullException("Directory path can not be null"))?.FullName
+					?? throw new ArgumentNullException("Directory path can not be null"),
 				"QuantumQuery.Core",
 				"JSONs",
 				"PubChemElements_all.json");
@@ -34,7 +38,8 @@ namespace QuantumQuery.Core.Services
 		public async Task<ElementDto> GetByIdAsync(Guid id)
 		{
 			var elements = await GetAllAsync();
-			return elements.FirstOrDefault(e => e.Id == id);
+			return elements.FirstOrDefault(e => e.Id == id) 
+				?? throw new ArgumentNullException("Data can not be null");
 		}
 	}
 }
