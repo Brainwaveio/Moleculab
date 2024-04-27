@@ -12,9 +12,12 @@ namespace QuantumQuery.Core.SQLite
 			{
 				config.CreateMap<Element, ElementDto>()
 					.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id != null ? Guid.Parse(src.Id) : (Guid?)null))
+					.ForMember(dest => dest.StandardState, opt => opt.MapFrom(src => !string.IsNullOrEmpty(src.StandardState) ? Enum.Parse<ElemntState>(src.StandardState, true) : (ElemntState?)null))
 					.ForMember(dest => dest.CPKHexColor, opt => opt.MapFrom(src => src.CpkhexColor))
 					.ReverseMap()
-					.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.ToString()));
+					.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.ToString()))
+					.ForMember(dest => dest.StandardState, opt => opt.MapFrom(src => src.StandardState.HasValue ? src.StandardState.Value.ToString() : null))
+					.ForMember(dest => dest.CpkhexColor, opt => opt.MapFrom(src => src.CPKHexColor));
 			});
 
 			configuration.AssertConfigurationIsValid();
