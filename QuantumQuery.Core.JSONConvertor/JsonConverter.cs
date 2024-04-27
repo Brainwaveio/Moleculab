@@ -27,21 +27,21 @@ namespace QuantumQuery.Core.JSONConvertor
 				var element = new ElementDto
 				{
 					Id = Guid.NewGuid(),
-					Index = int.Parse(cells[0]),
+					Index = long.Parse(cells[0]),
 					ShortName = cells[1],
 					ElementName = cells[2],
-					AtomicMass = float.Parse(cells[3], CultureInfo.InvariantCulture),
+					AtomicMass = double.Parse(cells[3], CultureInfo.InvariantCulture),
 					CPKHexColor = cells[4],
 					ElectronConfiguration = cells[5],
-					Electronegativity = TryParseFloat(cells[6]),
-					AtomicRadius = TryParseInt(cells[7]),
-					IonizationEnergy = TryParseFloat(cells[8]),
-					ElectronAffinity = TryParseFloat(cells[9]),
+					Electronegativity = TryParseBouble(cells[6]),
+					AtomicRadius = TryParseLong(cells[7]),
+					IonizationEnergy = TryParseBouble(cells[8]),
+					ElectronAffinity = TryParseBouble(cells[9]),
 					OxidationStates = cells[10],
 					StandardState = elementState,
-					MeltingPoint = TryParseFloat(cells[12]),
-					BoilingPoint = TryParseFloat(cells[13]),
-					Density = TryParseFloat(cells[14]),
+					MeltingPoint = TryParseBouble(cells[12]),
+					BoilingPoint = TryParseBouble(cells[13]),
+					Density = TryParseBouble(cells[14]),
 					GroupBlock = cells[15],
 					YearDiscovered = cells[16]
 				};
@@ -54,18 +54,18 @@ namespace QuantumQuery.Core.JSONConvertor
 			await File.WriteAllTextAsync(outputFilePath, outputJson);
 		}
 
-		private float? TryParseFloat(string input)
+		private double? TryParseBouble(string input)
 		{
-			if (float.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
+			if (double.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
 			{
 				return result;
 			}
 			return null;
 		}
 
-		private int? TryParseInt(string input)
+		private long? TryParseLong(string input)
 		{
-			if (int.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
+			if (long.TryParse(input, NumberStyles.Any, CultureInfo.InvariantCulture, out var result))
 			{
 				return result;
 			}
