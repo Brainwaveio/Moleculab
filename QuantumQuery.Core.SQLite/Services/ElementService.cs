@@ -71,7 +71,7 @@ namespace QuantumQuery.Core.SQLite.Services
 
 			var existingModel = await _quantumQueryDbContext.Elements
 				.AsNoTracking()
-				.FirstOrDefaultAsync(x => x.Id == model.Id);
+				.FirstAsync(x => x.Id == model.Id);
 
 			if (existingModel == null)
 			{
