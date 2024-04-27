@@ -27,12 +27,12 @@ namespace QuantumQuery.Core.Services
 
 		public async Task<List<ElementDto>> GetAllAsync()
 		{
-			using (var reader = File.OpenText(_filePath))
-			{
-				var fileContent = await reader.ReadToEndAsync();
-				var elements = JsonConvert.DeserializeObject<List<ElementDto>>(fileContent);
-				return elements ?? new List<ElementDto>();
-			}
+			using var reader = File.OpenText(_filePath);
+
+			var fileContent = await reader.ReadToEndAsync();
+			var elements = JsonConvert.DeserializeObject<List<ElementDto>>(fileContent);
+
+			return elements ?? new List<ElementDto>();
 		}
 
 		public async Task<ElementDto> GetByIdAsync(Guid id)
