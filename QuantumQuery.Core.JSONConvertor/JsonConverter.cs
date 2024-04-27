@@ -24,7 +24,7 @@ namespace QuantumQuery.Core.JSONConvertor
 				var cells = row.Cell;
 				ElemntState elementState = ParseElementState(cells[11]);
 
-				var element = new ElementDto
+				elements.Add(new()
 				{
 					Id = Guid.NewGuid(),
 					Index = long.Parse(cells[0]),
@@ -44,10 +44,7 @@ namespace QuantumQuery.Core.JSONConvertor
 					Density = TryParseBouble(cells[14]),
 					GroupBlock = cells[15],
 					YearDiscovered = cells[16]
-				};
-
-
-				elements.Add(element);
+				});
 			}
 
 			var outputJson = JsonConvert.SerializeObject(elements, Formatting.Indented);
