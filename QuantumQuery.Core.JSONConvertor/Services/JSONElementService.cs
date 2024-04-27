@@ -4,11 +4,11 @@ using QuantumQuery.Core.SQLite.DTOs;
 
 namespace QuantumQuery.Core.Services
 {
-	public class ElementService : IElementService
+	public class JSONElementService : IJSONElementService
 	{
 		private readonly string _filePath;
 
-		public ElementService()
+		public JSONElementService()
 		{
 			var directoryInfo = Directory.GetParent(Environment.CurrentDirectory);
 			directoryInfo = Directory.GetParent(directoryInfo?.FullName
