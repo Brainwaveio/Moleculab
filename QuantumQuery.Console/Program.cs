@@ -1,6 +1,7 @@
 ﻿using QuantumQuery.Core.JSONConvertor;
 using QuantumQuery.Core.LiteDB.Services;
 using QuantumQuery.Core.Services;
+using QuantumQuery.Core.SQLite;
 using QuantumQuery.DAl.LiteDB.Model;
 using QuantumQuery.DAL.SQLite;
 
@@ -8,6 +9,9 @@ public class Program
 {
 	private static async Task Main(string[] args)
 	{
+		var mapperConfig = MapperConfig.RegisterMaps();
+		var mapper = mapperConfig.CreateMapper();
+
 		DotNetEnv.Env.Load();
 		Console.WriteLine("Hello, World!");
 
