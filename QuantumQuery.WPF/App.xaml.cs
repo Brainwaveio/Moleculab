@@ -20,8 +20,6 @@ namespace QuantumQuery.WPF
 			ConfigureServices(services);
 
 			services.BuildServiceProvider();
-
-			this.Exit += OnApplicationExit;
 		}
 
 		protected override void OnStartup(StartupEventArgs e)
@@ -38,14 +36,7 @@ namespace QuantumQuery.WPF
 			Log.Information("Application Starting Up");
 		}
 
-		private void ConfigureServices(IServiceCollection services)
-		{
-			Core.SQLite.DI.AddSQLiteCore(services);
-
-			services.AddAutoMapper(typeof(Core.SQLite.MapperConfig));
-		}
-
-		private void OnApplicationExit(object sender, ExitEventArgs e)
+		protected override void OnExit(ExitEventArgs e)
 		{
 			var scriptPath = Path.Combine(DirectoryExtensions.GetRootDirectory()?.FullName
 				?? throw new ArgumentNullException("Directory path can not be null"),
@@ -67,6 +58,13 @@ namespace QuantumQuery.WPF
 			{
 				Log.Error("Error occurred in PowerShell script execution.");
 			}
+		}
+
+		private void ConfigureServices(IServiceCollection services)
+		{
+			Core.SQLite.DI.AddSQLiteCore(services);
+
+			services.AddAutoMapper(typeof(Core.SQLite.MapperConfig));
 		}
 	}
 }
