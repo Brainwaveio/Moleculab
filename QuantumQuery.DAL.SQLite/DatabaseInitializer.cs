@@ -125,7 +125,7 @@ namespace QuantumQuery.DAL.SQLite
 					for (int i = 0; i < reader.FieldCount; i++)
 					{
 						var value = reader.IsDBNull(i) ? "NULL" :
-							$"'{reader[i].ToString().Replace("'", "''")}'";
+							$"'{reader[i]?.ToString()?.Replace("'", "''")}'";
 						values.Add(value);
 					}
 
