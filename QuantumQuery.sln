@@ -13,11 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.JSONConve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.WPF", "QuantumQuery.WPF\QuantumQuery.WPF.csproj", "{5D7084D4-623A-41AA-A182-667DBBD86E04}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiteDB", "LiteDB", "{C4E45F06-82FD-4A07-B389-48BBF6B41DED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.DAL.SQLite", "QuantumQuery.DAL.SQLite\QuantumQuery.DAL.SQLite.csproj", "{4F60D966-7652-4AF2-9B6A-5184CC51D910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.DAL.SQLite", "QuantumQuery.DAL.SQLite\QuantumQuery.DAL.SQLite.csproj", "{4F60D966-7652-4AF2-9B6A-5184CC51D910}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.Core.SQLite", "QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj", "{023D27D1-D6BA-4B46-9DA1-F477CC51866E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.SQLite", "QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj", "{023D27D1-D6BA-4B46-9DA1-F477CC51866E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
