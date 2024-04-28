@@ -1,4 +1,6 @@
-﻿namespace QuantumQuery.Core.Extensions
+﻿using Serilog;
+
+namespace QuantumQuery.Core.Extensions
 {
 	public static class DirectoryExtensions
 	{
@@ -9,6 +11,7 @@
 			{
 				directory = Directory.GetParent(directory?.FullName
 					?? throw new ArgumentNullException("Directory path can not be null"));
+				Log.Information("DirectoryExtensions info: {directory}", directory);
 			}
 			return directory;
 		}
