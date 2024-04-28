@@ -2,10 +2,9 @@
 using System;
 using System.Windows;
 using System.IO;
-//using QuantumQuery.Core.SQLite;
 using Microsoft.Extensions.DependencyInjection;
-//using Serilog.Core;
-//using Serilog;
+using Serilog;
+using QuantumQuery.Core.Extensions;
 
 namespace QuantumQuery.WPF
 {
@@ -14,13 +13,13 @@ namespace QuantumQuery.WPF
 	/// </summary>
 	public partial class App : Application
 	{
-		private IServiceProvider _serviceProvider;
-
 		public App()
 		{
 			var services = new ServiceCollection();
+
 			ConfigureServices(services);
-			_serviceProvider = services.BuildServiceProvider();
+
+			services.BuildServiceProvider();
 
 			this.Exit += OnApplicationExit;
 		}
@@ -29,13 +28,14 @@ namespace QuantumQuery.WPF
 		{
 			base.OnStartup(e);
 			DotNetEnv.Env.Load();
-			
-			//TODO need to add logger
-			//var levelSwitch = new LoggingLevelSwitch();
 
-			//Log.Logger = new LoggerConfiguration()
-			//	.WriteTo.Seq("https://seq.example.com")
-			//	.CreateLogger();
+			Log.Logger = new LoggerConfiguration()
+				.MinimumLevel.Debug()
+				.WriteTo.Console()
+				.WriteTo.Seq("http://localhost:5341")
+				.CreateLogger();
+
+			Log.Information("Application Starting Up");
 		}
 
 		private void ConfigureServices(IServiceCollection services)
@@ -47,23 +47,12 @@ namespace QuantumQuery.WPF
 
 		private void OnApplicationExit(object sender, ExitEventArgs e)
 		{
-			var directoryInfo = Directory.GetParent(Environment.CurrentDirectory);
-
-			directoryInfo = Directory.GetParent(directoryInfo?.FullName
-				?? throw new ArgumentNullException("Directory path can not be null"));
-
-			directoryInfo = Directory.GetParent(directoryInfo?.FullName
-				?? throw new ArgumentNullException("Directory path can not be null"));
-
-			var scriptPath = Path.Combine(
-				Directory.GetParent(
-					directoryInfo?.FullName 
-					?? throw new ArgumentNullException("Directory path can not be null"))?.FullName
-					?? throw new ArgumentNullException("Directory path can not be null"),
+			var scriptPath = Path.Combine(DirectoryExtensions.GetRootDirectory()?.FullName
+				?? throw new ArgumentNullException("Directory path can not be null"),
 				"PowerShell",
 				"StopDatabase.ps1");
 
-			var psi = new ProcessStartInfo
+			var process = new ProcessStartInfo
 			{
 				FileName = "powershell",
 				Arguments = $"-NoProfile -ExecutionPolicy Bypass -File \"{scriptPath}\"",
@@ -71,12 +60,12 @@ namespace QuantumQuery.WPF
 				CreateNoWindow = true
 			};
 
-			var psProcess = Process.Start(psi);
-			psProcess?.WaitForExit();
+			var processStart = Process.Start(process);
+			processStart?.WaitForExit();
 
-			if (psProcess?.ExitCode != 0)
+			if (processStart?.ExitCode != 0)
 			{
-				Console.WriteLine("Error occurred in PowerShell script execution.");
+				Log.Error("Error occurred in PowerShell script execution.");
 			}
 		}
 	}
