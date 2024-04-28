@@ -15,7 +15,7 @@ namespace QuantumQuery.Core.SQLite
 					.ForMember(dest => dest.StandardState, opt => opt.MapFrom(src => !string.IsNullOrEmpty(src.StandardState) ? Enum.Parse<ElemntState>(src.StandardState, true) : (ElemntState?)null))
 					.ReverseMap()
 					.ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.ToString()))
-					.ForMember(dest => dest.StandardState, opt => opt.MapFrom(src => src.StandardState.HasValue ? src.StandardState.Value.ToString() : null))
+					.ForMember(dest => dest.StandardState, opt => opt.MapFrom(src => src.StandardState.HasValue ? src.StandardState.Value.ToString() : null));
 			});
 
 			configuration.AssertConfigurationIsValid();
