@@ -7,7 +7,7 @@
 		public required string ShortName { get; set; }
 		public required string ElementName { get; set; }
 		public required double AtomicMass { get; set; }
-		public required string CPKHexColor { get; set; }
+		public required string CpkhexColor { get; set; }
 		public Core.ElemntState? StandardState { get; set; }
 		public string? ElectronConfiguration { get; set; }
 		public string? OxidationStates { get; set; }

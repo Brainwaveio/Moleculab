@@ -20,7 +20,6 @@ public partial class Element
 
     public double AtomicMass { get; set; }
 
-    [Column("CPKHexColor")]
     public string CpkhexColor { get; set; } = null!;
 
     public string? StandardState { get; set; }

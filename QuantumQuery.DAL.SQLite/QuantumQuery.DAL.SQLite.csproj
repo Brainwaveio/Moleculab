@@ -26,4 +26,9 @@
     <ProjectReference Include="..\QuantumQuery.Core\QuantumQuery.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Context\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

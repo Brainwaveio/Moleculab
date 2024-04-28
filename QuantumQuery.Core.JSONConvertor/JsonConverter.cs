@@ -33,7 +33,7 @@ namespace QuantumQuery.Core.JSONConvertor
 					ShortName = cells[1],
 					ElementName = cells[2],
 					AtomicMass = double.Parse(cells[3], CultureInfo.InvariantCulture),
-					CPKHexColor = cells[4],
+					CpkhexColor = cells[4],
 					ElectronConfiguration = cells[5],
 					Electronegativity = TryParseBouble(cells[6]),
 					AtomicRadius = TryParseLong(cells[7]),
