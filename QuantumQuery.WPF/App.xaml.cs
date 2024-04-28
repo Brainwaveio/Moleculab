@@ -1,10 +1,6 @@
-﻿using System.Diagnostics;
-using System;
-using System.Windows;
-using System.IO;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Serilog;
-using QuantumQuery.Core.Extensions;
+using System.Windows;
 
 namespace QuantumQuery.WPF
 {
@@ -34,30 +30,6 @@ namespace QuantumQuery.WPF
 				.CreateLogger();
 
 			Log.Information("Application Starting Up");
-		}
-
-		protected override void OnExit(ExitEventArgs e)
-		{
-			var scriptPath = Path.Combine(DirectoryExtensions.GetRootDirectory()?.FullName
-				?? throw new ArgumentNullException("Directory path can not be null"),
-				"PowerShell",
-				"StopDatabase.ps1");
-
-			var process = new ProcessStartInfo
-			{
-				FileName = "powershell",
-				Arguments = $"-NoProfile -ExecutionPolicy Bypass -File \"{scriptPath}\"",
-				UseShellExecute = false,
-				CreateNoWindow = true
-			};
-
-			var processStart = Process.Start(process);
-			processStart?.WaitForExit();
-
-			if (processStart?.ExitCode != 0)
-			{
-				Log.Error("Error occurred in PowerShell script execution.");
-			}
 		}
 
 		private void ConfigureServices(IServiceCollection services)
