@@ -2,20 +2,15 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+As an open-source project, we are unable to provide specific timelines for when new versions of our software will be released. Our team does not have the resources to forecast precise release dates. However, we can inform you about which versions are currently being supported with security updates.
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| ------- | ------------------ 
+|  1.0.0  | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you encounter an issue and would like to report a problem, please create an issue on our repository's issue page. We encourage you to describe the problem thoroughly and provide any necessary details to help us understand and address the issue more effectively.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+### Note
+> For any issues or support, please refer to the [QuantumQuery Support](https://github.com/Katyaraa1/QuantumQuery/pulls) page.
