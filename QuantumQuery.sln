@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.DAL.SQLite", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.SQLite", "QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj", "{023D27D1-D6BA-4B46-9DA1-F477CC51866E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.UI", "QuantumQuery.UI\QuantumQuery.UI.csproj", "{B0309F9D-C984-466C-95E8-C9AA8D7888CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,12 @@ Global
 		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{023D27D1-D6BA-4B46-9DA1-F477CC51866E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0309F9D-C984-466C-95E8-C9AA8D7888CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0309F9D-C984-466C-95E8-C9AA8D7888CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0309F9D-C984-466C-95E8-C9AA8D7888CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B0309F9D-C984-466C-95E8-C9AA8D7888CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0309F9D-C984-466C-95E8-C9AA8D7888CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0309F9D-C984-466C-95E8-C9AA8D7888CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
