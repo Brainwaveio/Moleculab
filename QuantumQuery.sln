@@ -11,13 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core", "Quantu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.JSONConvertor", "QuantumQuery.Core.JSONConvertor\QuantumQuery.Core.JSONConvertor.csproj", "{BD65B090-5B85-4B7C-BF1E-70DD92853955}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.WPF", "QuantumQuery.WPF\QuantumQuery.WPF.csproj", "{5D7084D4-623A-41AA-A182-667DBBD86E04}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.DAL.SQLite", "QuantumQuery.DAL.SQLite\QuantumQuery.DAL.SQLite.csproj", "{4F60D966-7652-4AF2-9B6A-5184CC51D910}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.Core.SQLite", "QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj", "{023D27D1-D6BA-4B46-9DA1-F477CC51866E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuantumQuery.UI", "QuantumQuery.UI\QuantumQuery.UI.csproj", "{B0309F9D-C984-466C-95E8-C9AA8D7888CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuantumQuery.UI", "QuantumQuery.UI\QuantumQuery.UI.csproj", "{B0309F9D-C984-466C-95E8-C9AA8D7888CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,10 +35,6 @@ Global
 		{BD65B090-5B85-4B7C-BF1E-70DD92853955}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD65B090-5B85-4B7C-BF1E-70DD92853955}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD65B090-5B85-4B7C-BF1E-70DD92853955}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D7084D4-623A-41AA-A182-667DBBD86E04}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4F60D966-7652-4AF2-9B6A-5184CC51D910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4F60D966-7652-4AF2-9B6A-5184CC51D910}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F60D966-7652-4AF2-9B6A-5184CC51D910}.Release|Any CPU.ActiveCfg = Release|Any CPU
