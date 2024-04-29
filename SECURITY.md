@@ -12,5 +12,5 @@ As an open-source project, we are unable to provide specific timelines for when 
 
 If you encounter an issue and would like to report a problem, please create an issue on our repository's issue page. We encourage you to describe the problem thoroughly and provide any necessary details to help us understand and address the issue more effectively.
 
-### Note
+> [!NOTE]
 > For any issues or support, please refer to the [QuantumQuery Support](https://github.com/Quantum-Query/QuantumQuery/issues) page.
