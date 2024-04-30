@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuantumQuery.Core.JSONConvertor\Moleculab.Core.JSONConvertor.csproj" />
-    <ProjectReference Include="..\QuantumQuery.Core.SQLite\Moleculab.Core.SQLite.csproj" />
-    <ProjectReference Include="..\QuantumQuery.Core\Moleculab.Core.csproj" />
-    <ProjectReference Include="..\QuantumQuery.DAL.SQLite\Moleculab.DAL.SQLite.csproj" />
+    <ProjectReference Include="..\Moleculab.Core.JSONConvertor\Moleculab.Core.JSONConvertor.csproj" />
+    <ProjectReference Include="..\Moleculab.Core.SQLite\Moleculab.Core.SQLite.csproj" />
+    <ProjectReference Include="..\Moleculab.Core\Moleculab.Core.csproj" />
+    <ProjectReference Include="..\Moleculab.DAL.SQLite\Moleculab.DAL.SQLite.csproj" />
   </ItemGroup>
 
 </Project>

@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuantumQuery.Core\Moleculab.Core.csproj" />
+    <ProjectReference Include="..\Moleculab.Core\Moleculab.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

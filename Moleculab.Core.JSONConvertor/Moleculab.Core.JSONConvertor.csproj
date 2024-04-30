@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\QuantumQuery.Core.SQLite\Moleculab.Core.SQLite.csproj" />
-    <ProjectReference Include="..\QuantumQuery.Core\Moleculab.Core.csproj" />
+    <ProjectReference Include="..\Moleculab.Core.SQLite\Moleculab.Core.SQLite.csproj" />
+    <ProjectReference Include="..\Moleculab.Core\Moleculab.Core.csproj" />
   </ItemGroup>
 
 </Project>
