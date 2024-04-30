@@ -8,7 +8,7 @@
 		public required string ElementName { get; set; }
 		public required double AtomicMass { get; set; }
 		public required string CpkhexColor { get; set; }
-		public Core.ElemntState? StandardState { get; set; }
+		public ElemntState? StandardState { get; set; }
 		public string? ElectronConfiguration { get; set; }
 		public string? OxidationStates { get; set; }
 		public double? Electronegativity { get; set; }

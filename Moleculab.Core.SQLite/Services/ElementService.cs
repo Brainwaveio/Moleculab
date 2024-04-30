@@ -32,9 +32,6 @@ namespace Moleculab.Core.SQLite.Services
 				return dto;
 			}
 
-			//model.IsActive = false;
-			//_startUpDbContext.Update(model);
-
 			_quantumQueryDbContext.Elements.Remove(model);
 			await _quantumQueryDbContext.SaveChangesAsync();
 
@@ -64,7 +61,7 @@ namespace Moleculab.Core.SQLite.Services
 		{
 			var model = _mapper.Map<Element>(obj);
 
-			if (model.Id == string.Empty || model.Id == " ")
+			if (model.Id == string.Empty || model.Id == " " || model.Id == null)
 			{
 				model.Id = Guid.NewGuid().ToString();
 			}
