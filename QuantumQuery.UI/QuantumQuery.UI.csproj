@@ -50,5 +50,9 @@
 		<PackageReference Include="Serilog.Sinks.Seq" Version="7.0.0" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\QuantumQuery.Core.SQLite\QuantumQuery.Core.SQLite.csproj" />
+	</ItemGroup>
+
 
 </Project>

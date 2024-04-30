@@ -28,6 +28,9 @@ namespace QuantumQuery.UI
 			Log.Information("Application Starting Up");
 #endif
 
+			//register dependency injection
+			Core.SQLite.DI.AddSQLiteCore(builder.Services);
+
 			return builder.Build();
 		}
 	}
