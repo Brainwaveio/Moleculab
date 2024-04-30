@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Serilog;
 
 namespace QuantumQuery.UI
 {
@@ -15,9 +16,17 @@ namespace QuantumQuery.UI
 					fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				});
 
-			#if DEBUG
-				builder.Logging.AddDebug();
-			#endif
+#if DEBUG
+			builder.Logging.AddDebug();
+
+			Log.Logger = new LoggerConfiguration()
+				.MinimumLevel.Debug()
+				.WriteTo.Console()
+				.WriteTo.Seq("http://localhost:5341")
+				.CreateLogger();
+
+			Log.Information("Application Starting Up");
+#endif
 
 			return builder.Build();
 		}
