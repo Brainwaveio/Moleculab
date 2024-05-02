@@ -1,4 +1,4 @@
-# QuantumQuery
+# Moleculab
 
 includes Periodic table of elements.
 
@@ -8,4 +8,4 @@ https://sqlitebrowser.org/
 
 https://sqlitebrowser.org/dl/
 
-https://trello.com/invite/quantumquery2/ATTI91eac5ccf7b439162f881317d0137e0d13D9FBA0
+https://trello.com/invite/b/mZsDQh9H/ATTIdf71c09ae2490763e8b7ffc796ccbf5c659472CA/moleculab
