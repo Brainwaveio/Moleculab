@@ -23,7 +23,7 @@ namespace Moleculab.Core.JSONConvertor
 				?? throw new ArgumentNullException("Argument in JSON can not be null"))
 			{
 				var cells = row.Cell;
-				ElemntState elementState = ParseElementState(cells?[11]
+				var elementState = ParseElementState(cells?[11]
 					?? throw new ArgumentNullException("Argument in JSON can not be null"));
 
 				elements.Add(new()
