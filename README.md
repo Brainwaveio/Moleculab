@@ -12,7 +12,7 @@
 
 - `Solubility Calculator`: An instrument for teaching solubility of compounds at various temperatures.
 
-- `Data Analysis and Automation Support`: Options for extended data analysis and automation of routine tasks using proprietary scripts or macros.
+- `Data Analysis and Automation Support`: Options for extended data analysis and automation of routine tasks using proprietary scripts (may be python scripts or lua) or macros.
 
 - `Integration with Literature Databases`: Enhanced access to scientific publications, patents, and other resources for chemical researchers.
 
