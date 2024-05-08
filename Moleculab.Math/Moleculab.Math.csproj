@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Moleculab.Core.JSONConvertor\Moleculab.Core.JSONConvertor.csproj" />
+    <ProjectReference Include="..\Moleculab.Core.SQLite\Moleculab.Core.SQLite.csproj" />
+  </ItemGroup>
+
+</Project>

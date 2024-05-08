@@ -21,6 +21,7 @@
     <ProjectReference Include="..\Moleculab.Core.SQLite\Moleculab.Core.SQLite.csproj" />
     <ProjectReference Include="..\Moleculab.Core\Moleculab.Core.csproj" />
     <ProjectReference Include="..\Moleculab.DAL.SQLite\Moleculab.DAL.SQLite.csproj" />
+    <ProjectReference Include="..\Moleculab.Math\Moleculab.Math.csproj" />
   </ItemGroup>
 
 </Project>
