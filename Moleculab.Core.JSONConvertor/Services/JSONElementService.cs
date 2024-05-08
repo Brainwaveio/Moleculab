@@ -20,8 +20,7 @@ namespace Moleculab.Core.Services
 				Directory.GetParent(directoryInfo?.FullName
 					?? throw new ArgumentNullException("Directory path can not be null"))?.FullName
 					?? throw new ArgumentNullException("Directory path can not be null"),
-				"QuantumQuery.Core",
-				"JSONs",
+				"JSON",
 				"PubChemElements_all.json");
 		}
 
