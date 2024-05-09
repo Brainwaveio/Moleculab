@@ -45,7 +45,10 @@ public class Program
 
 		ServiceLocator.SetServiceProvider(serviceProvider);
 
-		DatabaseInitializer.Initialize();
+		if (File.Exists(dbPath))
+		{
+			DatabaseInitializer.Initialize();
+		}
 
 		//var compound = new Compound();
 

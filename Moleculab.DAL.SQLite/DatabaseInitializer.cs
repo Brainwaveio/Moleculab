@@ -10,18 +10,39 @@ namespace Moleculab.DAL.SQLite
 		{
 			var dbContext = ServiceLocator.GetService<MoleculabDbContext>();
 			dbContext.Database.EnsureCreated();
+			InitializeData(dbContext);
 		}
 
-		//TODO update this method
-		private static void SeedData(MoleculabDbContext dbContext)
+		private static void InitializeData(MoleculabDbContext dbContext)
 		{
-			// Ensure the table is created
-			dbContext.Database.ExecuteSqlRaw("CREATE TABLE IF NOT EXISTS Products (Id INTEGER PRIMARY KEY, Name TEXT, Price REAL);");
+			var sqlFilePath = Path.Combine(
+				DirectoryExtensions.GetRootDirectory()?.FullName
+				?? throw new NullReferenceException("path to SQL can not be null"),
+				"SQL",
+				"Data",
+				"InitializeData",
+				"Data.sql");
 
-			// Check if any products are already added
-			if (!dbContext.Elements.Any())
+			if (File.Exists(sqlFilePath))
 			{
-				dbContext.SaveChanges();
+				var sqlCommands = File.ReadAllText(sqlFilePath);
+
+				using var transaction = dbContext.Database.BeginTransaction();
+
+				try
+				{
+					dbContext.Database.ExecuteSqlRaw(sqlCommands);
+					transaction.Commit();
+				}
+				catch (Exception ex)
+				{
+					Console.WriteLine("Error executing SQL: " + ex.Message);
+					transaction.Rollback();
+				}
+			}
+			else
+			{
+				Console.WriteLine("SQL file not found: " + sqlFilePath);
 			}
 		}
 	}

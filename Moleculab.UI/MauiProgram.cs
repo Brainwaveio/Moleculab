@@ -38,12 +38,17 @@ namespace Moleculab.UI
 			builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 			// Configure DAL
-			var SQLitePath = @"F:\Projects\src\Moleculab\Database\Test\MoleculabSQLite.db";
+			var SQLitePath = Path.Combine(
+				DirectoryExtensions.GetRootDirectory()?.FullName,
+				"Database",
+				"Test",
+				"MoleculabSQLite.db");
 			var directory = Path.GetDirectoryName(SQLitePath);
 			if (!Directory.Exists(directory))
 			{
 				Directory.CreateDirectory(directory);
 			}
+
 			builder.Services.AddSQLiteDAL(SQLitePath);
 
 			//register dependency injection
@@ -51,6 +56,12 @@ namespace Moleculab.UI
 
 			//add service locator
 			ServiceLocator.SetServiceProvider(builder.Services.BuildServiceProvider());
+
+			// initialize database
+			if (File.Exists(SQLitePath))
+			{
+				DatabaseInitializer.Initialize();
+			}
 
 			return builder.Build();
 		}
