@@ -1,9 +1,11 @@
 ﻿using Moleculab.Core.Services;
 using Moleculab.Core.SQLite.DTOs;
+using Moleculab.Math.Interfaces;
+using System.Runtime.CompilerServices;
 
 namespace Moleculab.Math
 {
-    public class Compound : ICloneable
+    public class Compound : ICompound
     {
         public int Count => _composition.Count;
         public Dictionary<ElementDto, int>.ValueCollection Values => _composition.Values;
@@ -34,11 +36,24 @@ namespace Moleculab.Math
             else
             {
                 _composition.Add(jsonElement, quantity);
-                _composition.Remove(jsonElement);
             }
         }
 
-        public async Task<bool> Remove(Element element)
+		public async Task Add(Element element)
+		{
+			var jsonElement = await _jsonElementService.GetByShortNameAsync(element.ToString());
+
+			if (_composition.ContainsKey(jsonElement))
+			{
+				_composition[jsonElement] += 1;
+			}
+			else
+			{
+				_composition.Add(jsonElement, 1);
+			}
+		}
+
+		public async Task<bool> Remove(Element element)
         {
             return _composition.Remove(await _jsonElementService.GetByShortNameAsync(element.ToString()));
         }
@@ -64,7 +79,7 @@ namespace Moleculab.Math
 
         public object Clone()
         {
-            throw new NotImplementedException();
+            return new Compound(new Dictionary<ElementDto, int>(_composition));
         }
 
         public override bool Equals(object? obj)
@@ -75,7 +90,7 @@ namespace Moleculab.Math
 
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            return RuntimeHelpers.GetHashCode(this);
         }
     }
 }
