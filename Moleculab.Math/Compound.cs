@@ -54,6 +54,11 @@ namespace Moleculab.Math
 			}
 		}
 
+		/// <summary>
+		/// This method removes the element completely
+		/// </summary>
+		/// <param name="element"></param>
+		/// <returns></returns>
 		public async Task<bool> Remove(Element element)
 		{
 			return _composition.Remove(await _elementService.GetByShortNameAsync(element.ToString()));

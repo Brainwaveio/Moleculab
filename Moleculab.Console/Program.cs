@@ -50,13 +50,13 @@ public class Program
 		//	DatabaseInitializer.Initialize();
 		//}
 
-		//var compound = new Compound();
+		var compound = new Compound();
 
-		//await compound.Add(Element.H, 2);
-		//await compound.Add(Element.O, 1);
-		//await compound.Add(Element.Cl, 1);
+		await compound.Add(Element.H, 2);
+		await compound.Add(Element.O, 1);
+		await compound.Add(Element.Cl, 1);
 
-		//Console.WriteLine(compound.CalculateMolecularWeight());
+		Console.WriteLine(compound.CalculateMolecularWeight());
 
 		// Build the ServiceProvider
 		//var serviceProvider = services.BuildServiceProvider();
