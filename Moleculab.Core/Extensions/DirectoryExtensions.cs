@@ -4,6 +4,13 @@ namespace Moleculab.Core.Extensions
 {
 	public static class DirectoryExtensions
 	{
+		/// <summary>
+		/// use this method only if you are using in Console application 
+		/// in MAUI application it won't be work
+		/// </summary>
+		/// <param name="fromDirectory"></param>
+		/// <returns>DirectoryInfo</returns>
+		/// <exception cref="ArgumentNullException"></exception>
 		public static DirectoryInfo? GetRootDirectory(int fromDirectory)
 		{
 			var directory = Directory.GetParent(Environment.CurrentDirectory);
@@ -16,6 +23,11 @@ namespace Moleculab.Core.Extensions
 			return directory;
 		}
 
+		/// <summary>
+		/// to use this method in MAUI application set in environment variable IS_CONSOLE is False
+		/// or if you are wan't to use this method in console application, set in environment variable IS_CONSOLE is true or don't set environment variable
+		/// </summary>
+		/// <returns></returns>
 		public static string GetRootDirectory()
 		{
 			if (Environment.GetEnvironmentVariable("IS_CONSOLE") == null || 
