@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Moleculab.Core;
 using Moleculab.Core.Extensions;
 using Moleculab.Core.JSONConvertor;
@@ -7,6 +8,7 @@ using Moleculab.Core.SQLite;
 using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Services;
 using Moleculab.DAL.SQLite;
+using Moleculab.DAL.SQLite.Context;
 using Moleculab.Math;
 using Newtonsoft.Json;
 using System;
@@ -16,16 +18,19 @@ public class Program
 {
 	private static async Task Main(string[] args)
 	{
-		//var mapperConfig = MapperConfig.RegisterMaps();
-		//var mapper = mapperConfig.CreateMapper();
-
 		DotNetEnv.Env.Load();
 		Console.WriteLine("Hello, World!");
 
-		// Create a new ServiceCollection
+		// Configure mapper config
 		var services = new ServiceCollection();
+		var mapper = MapperConfig.RegisterMaps().CreateMapper();
+		services.AddSingleton(mapper);
+		services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-		// Configure your services
+		// Configure DAL
+		services.AddSQLiteDAL("F:\\Projects\\src\\Moleculab\\Database\\QuantumQuerySQLite.db");
+
+		// Configure services
 		Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
 
 		var serviceProvider = services.BuildServiceProvider();
