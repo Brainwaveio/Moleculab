@@ -7,20 +7,20 @@ using Moleculab.DAL.SQLite.Models;
 
 namespace Moleculab.Core.SQLite.Services
 {
-	public class ElementService : IService<ElementDto, ElementDto>
+	public class ElementService : IElementService
 	{
-		private readonly MoleculabDbContext _quantumQueryDbContext;
+		private readonly MoleculabDbContext _moleculabDbContext;
 		private readonly IMapper _mapper;
 
-		public ElementService(MoleculabDbContext quantumQueryDbContext, IMapper mapper)
+		public ElementService(MoleculabDbContext moleculabDbContext, IMapper mapper)
 		{
-			_quantumQueryDbContext = quantumQueryDbContext;
+			_moleculabDbContext = moleculabDbContext;
 			_mapper = mapper;
 		}
 
 		public async Task<DeleteDto> DeleteById(Guid id)
 		{
-			var model = await _quantumQueryDbContext.Elements
+			var model = await _moleculabDbContext.Elements
 				.FirstOrDefaultAsync(x => x.Id == id.ToString());
 
 			var dto = new DeleteDto();
@@ -32,8 +32,8 @@ namespace Moleculab.Core.SQLite.Services
 				return dto;
 			}
 
-			_quantumQueryDbContext.Elements.Remove(model);
-			await _quantumQueryDbContext.SaveChangesAsync();
+			_moleculabDbContext.Elements.Remove(model);
+			await _moleculabDbContext.SaveChangesAsync();
 
 			dto.Id = id;
 			dto.IsDeleted = true;
@@ -43,7 +43,7 @@ namespace Moleculab.Core.SQLite.Services
 
 		public async Task<List<ElementDto>> GetAll()
 		{
-			var model = await _quantumQueryDbContext.Elements
+			var model = await _moleculabDbContext.Elements
 				.ToListAsync();
 
 			return _mapper.Map<List<ElementDto>>(model);
@@ -51,8 +51,16 @@ namespace Moleculab.Core.SQLite.Services
 
 		public async Task<ElementDto> GetById(Guid id)
 		{
-			var model = await _quantumQueryDbContext.Elements
+			var model = await _moleculabDbContext.Elements
 				.FirstOrDefaultAsync(x => x.Id == id.ToString());
+
+			return _mapper.Map<ElementDto>(model);
+		}
+
+		public async Task<ElementDto> GetByShortNameAsync(string shortName)
+		{
+			var model = await _moleculabDbContext.Elements
+				.FirstOrDefaultAsync(x => x.ShortName == shortName);
 
 			return _mapper.Map<ElementDto>(model);
 		}
@@ -66,20 +74,20 @@ namespace Moleculab.Core.SQLite.Services
 				model.Id = Guid.NewGuid().ToString();
 			}
 
-			var existingModel = await _quantumQueryDbContext.Elements
+			var existingModel = await _moleculabDbContext.Elements
 				.AsNoTracking()
 				.FirstAsync(x => x.Id == model.Id);
 
 			if (existingModel == null)
 			{
-				_quantumQueryDbContext.Elements.Add(model);
+				_moleculabDbContext.Elements.Add(model);
 			}
 			else
 			{
-				_quantumQueryDbContext.Elements.Update(model);
+				_moleculabDbContext.Elements.Update(model);
 			}
 
-			await _quantumQueryDbContext.SaveChangesAsync();
+			await _moleculabDbContext.SaveChangesAsync();
 
 			return _mapper.Map<ElementDto>(model);
 		}
