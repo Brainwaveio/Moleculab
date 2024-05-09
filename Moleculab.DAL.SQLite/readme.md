@@ -11,7 +11,7 @@ _replace conneciton string with yours if needed_
 
 ```
 dotnet ef dbcontext scaffold `
-"Data Source=F:\Projects\src\QuantumQuery\Database\QuantumQuerySQLite.db" `
+"Data Source=F:\Projects\src\Moleculab\Database\QuantumQuerySQLite.db" `
 Microsoft.EntityFrameworkCore.Sqlite `
 `
 --table Element `
