@@ -22,33 +22,33 @@ public class Program
 		Console.WriteLine("Hello, World!");
 
 		// Configure mapper config
-		var services = new ServiceCollection();
-		var mapper = MapperConfig.RegisterMaps().CreateMapper();
-		services.AddSingleton(mapper);
-		services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+		//var services = new ServiceCollection();
+		//var mapper = MapperConfig.RegisterMaps().CreateMapper();
+		//services.AddSingleton(mapper);
+		//services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-		// Configure DAL
-		var dbPath = @"F:\Projects\src\Moleculab\Database\Test\MoleculabSQLite.db";
+		//// Configure DAL
+		//var dbPath = @"F:\Projects\src\Moleculab\Database\MoleculabSQLite.db";
 
-		var directory = Path.GetDirectoryName(dbPath);
-		if (!Directory.Exists(directory))
-		{
-			Directory.CreateDirectory(directory);
-		}
+		//var directory = Path.GetDirectoryName(dbPath);
+		//if (!Directory.Exists(directory))
+		//{
+		//	Directory.CreateDirectory(directory);
+		//}
 
-		services.AddSQLiteDAL(dbPath);
+		//services.AddSQLiteDAL(dbPath);
 
-		// Configure services
-		Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
+		//// Configure services
+		//Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
 
-		var serviceProvider = services.BuildServiceProvider();
+		//var serviceProvider = services.BuildServiceProvider();
 
-		ServiceLocator.SetServiceProvider(serviceProvider);
+		//ServiceLocator.SetServiceProvider(serviceProvider);
 
-		if (File.Exists(dbPath))
-		{
-			DatabaseInitializer.Initialize();
-		}
+		//if (File.Exists(dbPath))
+		//{
+		//	DatabaseInitializer.Initialize();
+		//}
 
 		//var compound = new Compound();
 

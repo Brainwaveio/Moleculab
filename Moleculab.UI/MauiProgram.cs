@@ -39,9 +39,8 @@ namespace Moleculab.UI
 
 			// Configure DAL
 			var SQLitePath = Path.Combine(
-				DirectoryExtensions.GetRootDirectory()?.FullName,
+				DirectoryExtensions.GetRootDirectory(),
 				"Database",
-				"Test",
 				"MoleculabSQLite.db");
 			var directory = Path.GetDirectoryName(SQLitePath);
 			if (!Directory.Exists(directory))
@@ -58,7 +57,7 @@ namespace Moleculab.UI
 			ServiceLocator.SetServiceProvider(builder.Services.BuildServiceProvider());
 
 			// initialize database
-			if (File.Exists(SQLitePath))
+			if (!File.Exists(SQLitePath))
 			{
 				DatabaseInitializer.Initialize();
 			}

@@ -16,8 +16,7 @@ namespace Moleculab.DAL.SQLite
 		private static void InitializeData(MoleculabDbContext dbContext)
 		{
 			var sqlFilePath = Path.Combine(
-				DirectoryExtensions.GetRootDirectory()?.FullName
-				?? throw new NullReferenceException("path to SQL can not be null"),
+				DirectoryExtensions.GetRootDirectory(),
 				"SQL",
 				"Data",
 				"InitializeData",
@@ -36,13 +35,13 @@ namespace Moleculab.DAL.SQLite
 				}
 				catch (Exception ex)
 				{
-					Console.WriteLine("Error executing SQL: " + ex.Message);
 					transaction.Rollback();
+					throw new Exception("Error executing SQL: " + ex.Message);
 				}
 			}
 			else
 			{
-				Console.WriteLine("SQL file not found: " + sqlFilePath);
+				throw new Exception("SQL file not found: " + sqlFilePath);
 			}
 		}
 	}
