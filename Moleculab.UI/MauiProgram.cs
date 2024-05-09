@@ -37,9 +37,14 @@ namespace Moleculab.UI
 			builder.Services.AddSingleton(mapper);
 			builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-
 			// Configure DAL
-			builder.Services.AddSQLiteDAL("F:\\Projects\\src\\Moleculab\\Database\\QuantumQuerySQLite.db");
+			var SQLitePath = @"F:\Projects\src\Moleculab\Database\Test\MoleculabSQLite.db";
+			var directory = Path.GetDirectoryName(SQLitePath);
+			if (!Directory.Exists(directory))
+			{
+				Directory.CreateDirectory(directory);
+			}
+			builder.Services.AddSQLiteDAL(SQLitePath);
 
 			//register dependency injection
 			Core.SQLite.DI.AddSQLiteCore(builder.Services);

@@ -9,7 +9,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Moleculab.Core.JSONConvertor\Moleculab.Core.JSONConvertor.csproj" />
     <ProjectReference Include="..\Moleculab.Core.SQLite\Moleculab.Core.SQLite.csproj" />
-    <ProjectReference Include="..\Moleculab.Core\Moleculab.Core.csproj" />
   </ItemGroup>
 
 </Project>

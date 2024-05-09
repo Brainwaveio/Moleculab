@@ -1,6 +1,4 @@
-﻿using Moleculab.Core.SQLite.DTOs;
-
-namespace Moleculab.Math.Interfaces.Calculators
+﻿namespace Moleculab.Math.Interfaces.Calculators
 {
 	public interface IElementCalculators
 	{
