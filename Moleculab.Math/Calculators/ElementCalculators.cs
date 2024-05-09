@@ -34,6 +34,7 @@ namespace Moleculab.Math.Calculators
 
 		public async Task<int> CountOfProtons(Element element)
 		{
+			//calls method CountOfElectrons because it is the same code
 			return await CountOfElectrons(element);
 		}
 	}
