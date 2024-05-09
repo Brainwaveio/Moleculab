@@ -1,30 +1,30 @@
-﻿using Moleculab.Core.Services;
+﻿using Moleculab.Core.Extensions;
+using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces.Calculators;
 
 namespace Moleculab.Math.Calculators
 {
 	public class ElementCalculators : IElementCalculators
 	{
-		private readonly JSONElementService _jsonElementService;
+		private readonly IElementService _elementService;
 
 		public ElementCalculators()
 		{
-			_jsonElementService = new JSONElementService();
+			_elementService = ServiceLocator.GetService<IElementService>();
 		}
 
 		public async Task<int> CountOfElectrons(Element element)
 		{
-			var jsonElement = await _jsonElementService.GetByShortNameAsync(element.ToString());
-			return (int)jsonElement.Index;
+			return (int)(await _elementService.GetByShortNameAsync(element.ToString())).Index;
 		}
 
 		public async Task<int> CountOfNeutrons(Element element)
 		{
-			var jsonElement = await _jsonElementService.GetByShortNameAsync(element.ToString());
+			var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
 
-			if (jsonElement.ShortName != Element.Cl.ToString())
+			if (sqlElement.ShortName != Element.Cl.ToString())
 			{
-				return (int)(System.Math.Round(jsonElement.AtomicMass) - jsonElement.Index);
+				return (int)(System.Math.Round(sqlElement.AtomicMass) - sqlElement.Index);
 			}
 			else
 			{
