@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace Moleculab.UI
+namespace Moleculab.MAUI
 {
 	public class Program
 	{

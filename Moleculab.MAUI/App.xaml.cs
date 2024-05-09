@@ -1,4 +1,4 @@
-﻿namespace Moleculab.UI
+﻿namespace Moleculab.MAUI
 {
 	public partial class App : Application
 	{

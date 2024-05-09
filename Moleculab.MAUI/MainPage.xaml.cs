@@ -1,8 +1,8 @@
-﻿namespace Moleculab.UI
+﻿namespace Moleculab.MAUI
 {
 	public partial class MainPage : ContentPage
 	{
-		private int _count = 0;
+		int count = 0;
 
 		public MainPage()
 		{
@@ -11,12 +11,12 @@
 
 		private void OnCounterClicked(object sender, EventArgs e)
 		{
-			_count++;
+			count++;
 
-			if (_count == 1)
-				CounterBtn.Text = $"Clicked {_count} time";
+			if (count == 1)
+				CounterBtn.Text = $"Clicked {count} time";
 			else
-				CounterBtn.Text = $"Clicked {_count} times";
+				CounterBtn.Text = $"Clicked {count} times";
 
 			SemanticScreenReader.Announce(CounterBtn.Text);
 		}

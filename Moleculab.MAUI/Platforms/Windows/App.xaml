@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="Moleculab.UI.WinUI.App"
+    x:Class="Moleculab.MAUI.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:Moleculab.UI.WinUI">
+    xmlns:local="using:Moleculab.MAUI.WinUI">
 
 </maui:MauiWinUIApplication>

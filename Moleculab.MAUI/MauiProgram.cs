@@ -3,14 +3,12 @@ using Moleculab.Core.Extensions;
 using Moleculab.DAL.SQLite;
 using Serilog;
 
-namespace Moleculab.UI
+namespace Moleculab.MAUI
 {
 	public static class MauiProgram
 	{
 		public static MauiApp CreateMauiApp()
 		{
-			DotNetEnv.Env.Load();
-
 			var builder = MauiApp.CreateBuilder();
 			builder
 				.UseMauiApp<App>()
@@ -21,16 +19,15 @@ namespace Moleculab.UI
 				});
 
 #if DEBUG
-			builder.Logging.AddDebug();
+		builder.Logging.AddDebug();
 
-			Log.Logger = new LoggerConfiguration()
-				.MinimumLevel.Debug()
-				.WriteTo.Console()
-				.WriteTo.Seq("http://localhost:5341")
-				.CreateLogger();
+		Log.Logger = new LoggerConfiguration()
+			.MinimumLevel.Debug()
+			.WriteTo.Console()
+			.WriteTo.Seq("http://localhost:5341")
+			.CreateLogger();
 
-			Log.Information("Application Starting Up");
-
+		Log.Information("Application Starting Up");
 #endif
 
 			var mapper = Core.SQLite.MapperConfig.RegisterMaps().CreateMapper();

@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace Moleculab.UI
+namespace Moleculab.MAUI
 {
 	[Register("AppDelegate")]
 	public class AppDelegate : MauiUIApplicationDelegate
