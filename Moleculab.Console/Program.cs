@@ -28,7 +28,15 @@ public class Program
 		services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 		// Configure DAL
-		services.AddSQLiteDAL("F:\\Projects\\src\\Moleculab\\Database\\QuantumQuerySQLite.db");
+		var dbPath = @"F:\Projects\src\Moleculab\Database\Test\MoleculabSQLite.db";
+
+		var directory = Path.GetDirectoryName(dbPath);
+		if (!Directory.Exists(directory))
+		{
+			Directory.CreateDirectory(directory);
+		}
+
+		services.AddSQLiteDAL(dbPath);
 
 		// Configure services
 		Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
@@ -37,13 +45,15 @@ public class Program
 
 		ServiceLocator.SetServiceProvider(serviceProvider);
 
-		var compound = new Compound();
+		DatabaseInitializer.Initialize();
 
-		await compound.Add(Element.H, 2);
-		await compound.Add(Element.O, 1);
-		await compound.Add(Element.Cl, 1);
+		//var compound = new Compound();
 
-		Console.WriteLine(compound.CalculateMolecularWeight());
+		//await compound.Add(Element.H, 2);
+		//await compound.Add(Element.O, 1);
+		//await compound.Add(Element.Cl, 1);
+
+		//Console.WriteLine(compound.CalculateMolecularWeight());
 
 		// Build the ServiceProvider
 		//var serviceProvider = services.BuildServiceProvider();
