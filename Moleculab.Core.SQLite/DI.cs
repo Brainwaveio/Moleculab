@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Core.SQLite.Services;
 
@@ -9,7 +8,7 @@ namespace Moleculab.Core.SQLite
 	{
 		public static IServiceCollection AddSQLiteCore(this IServiceCollection services)
 		{
-			services.AddTransient<IService<ElementDto, ElementDto>, ElementService>();
+			services.AddTransient<IElementService, ElementService>();
 
 			return services;
 		}
