@@ -33,8 +33,6 @@ public class Program
 			sqlBuilder.AppendLine(GenerateInsertSql(element));
 		}
 
-		var test = 0;
-
 		//var outputSql = string.Join("\n", elements);
 		await File.WriteAllTextAsync(@"F:\Projects\src\Moleculab\SQL\Data\ElementData.sql", sqlBuilder.ToString());
 
