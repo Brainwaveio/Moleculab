@@ -1,10 +1,15 @@
-﻿using Moleculab.Core.JSONConvertor;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Moleculab.Core;
+using Moleculab.Core.Extensions;
+using Moleculab.Core.JSONConvertor;
 using Moleculab.Core.Services;
 using Moleculab.Core.SQLite;
 using Moleculab.Core.SQLite.DTOs;
+using Moleculab.Core.SQLite.Services;
 using Moleculab.DAL.SQLite;
 using Moleculab.Math;
 using Newtonsoft.Json;
+using System;
 using System.Text;
 
 public class Program
@@ -17,34 +22,57 @@ public class Program
 		DotNetEnv.Env.Load();
 		Console.WriteLine("Hello, World!");
 
+		// Create a new ServiceCollection
+		var services = new ServiceCollection();
+
+		// Configure your services
+		Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
+
+		var serviceProvider = services.BuildServiceProvider();
+
+		ServiceLocator.SetServiceProvider(serviceProvider);
+
+		var compound = new Compound();
+
+		await compound.Add(Element.H, 2);
+		await compound.Add(Element.O, 1);
+		await compound.Add(Element.Cl, 1);
+
+		Console.WriteLine(compound.CalculateMolecularWeight());
+
+		// Build the ServiceProvider
+		//var serviceProvider = services.BuildServiceProvider();
+
+
+
+		// Run your application
+		//RunApplication(serviceProvider);
+
 		//DatabaseInitializer.InitializeDatabase();
 
 		//var jsonConverter = new JsonConverter();
 		//await jsonConverter.ConvertToJsonFileAsync(
 		//	"F:\\Projects\\src\\QuantumQuery\\QuantumQuery.Console\\Input\\PubChemElements_all.json",
 		//	"F:\\Projects\\src\\QuantumQuery\\QuantumQuery.Console\\Output\\PubChemElements_all.json");
-		var jsonElementService = new JSONElementService();
-		var elementFromJson = await jsonElementService.GetAllAsync();
+		//var jsonElementService = new JSONElementService();
+		//var elementFromJson = await jsonElementService.GetAllAsync();
 
-		var sqlBuilder = new StringBuilder();
+		//var sqlBuilder = new StringBuilder();
 
-		foreach (var element in elementFromJson)
-		{
-			sqlBuilder.AppendLine(GenerateInsertSql(element));
-		}
+		//foreach (var element in elementFromJson)
+		//{
+		//	sqlBuilder.AppendLine(GenerateInsertSql(element));
+		//}
 
-		//var outputSql = string.Join("\n", elements);
-		await File.WriteAllTextAsync(@"F:\Projects\src\Moleculab\SQL\Data\ElementData.sql", sqlBuilder.ToString());
-
-		//var compound = new Compound();
-
-		//await compound.Add(Element.H, 2);
-		//await compound.Add(Element.O, 1);
-		//await compound.Add(Element.Cl, 1);
-
-		//Console.WriteLine(compound.CalculateMolecularWeight());
+		////var outputSql = string.Join("\n", elements);
+		//await File.WriteAllTextAsync(@"F:\Projects\src\Moleculab\SQL\Data\ElementData.sql", sqlBuilder.ToString());
 
 		Console.ReadLine();
+	}
+
+	private static void ConfigureServices(IServiceCollection services)
+	{
+        Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
 	}
 
 	private static string GenerateInsertSql(ElementDto element)
