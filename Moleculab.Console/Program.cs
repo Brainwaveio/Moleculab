@@ -59,9 +59,6 @@ public class Program
 
 		//var test = 2;
 
-		var densityElement = new GasDensityCalculator();
-		densityElement.Add(compound, 2);
-
 		Console.WriteLine(compound.CalculateMolecularWeight());
 
 		// Build the ServiceProvider
