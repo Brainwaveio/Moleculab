@@ -28,10 +28,10 @@ jobs:
           distribution: "adopt"
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restorevBrainwave.slnf
 
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build Brainwave.slnf --no-restore
 
       - name: Test
-        run: dotnet test --no-build --verbosity normal
+        run: dotnet test Brainwave.slnf --no-build --verbosity normal

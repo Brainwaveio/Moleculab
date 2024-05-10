@@ -1,0 +1,14 @@
+{
+  "solution": {
+    "path": "Moleculab.sln",
+    "projects": [
+      "Moleculab.Console\\Moleculab.Console.csproj",
+      "Moleculab.Core.JSONConvertor\\Moleculab.Core.JSONConvertor.csproj",
+      "Moleculab.Core.SQLite\\Moleculab.Core.SQLite.csproj",
+      "Moleculab.Core\\Moleculab.Core.csproj",
+      "Moleculab.DAL.SQLite\\Moleculab.DAL.SQLite.csproj",
+      "Moleculab.MAUI\\Moleculab.MAUI.csproj",
+      "Moleculab.Math\\Moleculab.Math.csproj"
+    ]
+  }
+}
