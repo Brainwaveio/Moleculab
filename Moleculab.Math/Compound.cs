@@ -34,15 +34,21 @@ namespace Moleculab.Math
 		/// <returns></returns>
 		public async Task Add(Element element, int quantity)
 		{
-			var jsonElement = await _elementService.GetByShortNameAsync(element.ToString());
-
-			if (_composition.ContainsKey(jsonElement))
+			try
 			{
-				_composition[jsonElement] += quantity;
+				var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+				if (_composition.ContainsKey(sqlElement))
+				{
+					_composition[sqlElement] += quantity;
+				}
+				else
+				{
+					_composition.Add(sqlElement, quantity);
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				_composition.Add(jsonElement, quantity);
+				throw new Exception(ex.Message);
 			}
 		}
 
@@ -53,15 +59,21 @@ namespace Moleculab.Math
 		/// <returns></returns>
 		public async Task Add(Element element)
 		{
-			var jsonElement = await _elementService.GetByShortNameAsync(element.ToString());
-
-			if (_composition.ContainsKey(jsonElement))
+			try
 			{
-				_composition[jsonElement] += 1;
+				var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+				if (_composition.ContainsKey(sqlElement))
+				{
+					_composition[sqlElement] += 1;
+				}
+				else
+				{
+					_composition.Add(sqlElement, 1);
+				}
 			}
-			else
+			catch (Exception ex)
 			{
-				_composition.Add(jsonElement, 1);
+				throw new Exception(ex.Message);
 			}
 		}
 
@@ -78,7 +90,6 @@ namespace Moleculab.Math
 		public float CalculateMolecularWeight()
 		{
 			var totalWeight = default(float);
-
 			foreach (var element in _composition)
 			{
 				if (element.Key.ShortName != Element.Cl.ToString())
@@ -90,7 +101,6 @@ namespace Moleculab.Math
 					totalWeight += (float)35.35 * element.Value;
 				}
 			}
-
 			return totalWeight;
 		}
 
