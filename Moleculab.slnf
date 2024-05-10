@@ -2,7 +2,6 @@
   "solution": {
     "path": "Moleculab.sln",
     "projects": [
-      "Moleculab.Console\\Moleculab.Console.csproj",
       "Moleculab.Core.JSONConvertor\\Moleculab.Core.JSONConvertor.csproj",
       "Moleculab.Core.SQLite\\Moleculab.Core.SQLite.csproj",
       "Moleculab.Core\\Moleculab.Core.csproj",
