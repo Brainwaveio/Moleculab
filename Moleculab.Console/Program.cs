@@ -10,6 +10,7 @@ using Moleculab.Core.SQLite.Services;
 using Moleculab.DAL.SQLite;
 using Moleculab.DAL.SQLite.Context;
 using Moleculab.Math;
+using Moleculab.Math.Calculators;
 using Newtonsoft.Json;
 using System;
 using System.Text;
@@ -22,28 +23,28 @@ public class Program
 		Console.WriteLine("Hello, World!");
 
 		// Configure mapper config
-		//var services = new ServiceCollection();
-		//var mapper = MapperConfig.RegisterMaps().CreateMapper();
-		//services.AddSingleton(mapper);
-		//services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+		var services = new ServiceCollection();
+		var mapper = MapperConfig.RegisterMaps().CreateMapper();
+		services.AddSingleton(mapper);
+		services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-		//// Configure DAL
-		//var dbPath = @"F:\Projects\src\Moleculab\Database\MoleculabSQLite.db";
+		// Configure DAL
+		var dbPath = @"F:\Projects\src\Moleculab\Database\MoleculabSQLite.db";
 
-		//var directory = Path.GetDirectoryName(dbPath);
-		//if (!Directory.Exists(directory))
-		//{
-		//	Directory.CreateDirectory(directory);
-		//}
+		var directory = Path.GetDirectoryName(dbPath);
+		if (!Directory.Exists(directory))
+		{
+			Directory.CreateDirectory(directory);
+		}
 
-		//services.AddSQLiteDAL(dbPath);
+		services.AddSQLiteDAL(dbPath);
 
-		//// Configure services
-		//Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
+		// Configure services
+		Moleculab.Core.SQLite.DI.AddSQLiteCore(services);
 
-		//var serviceProvider = services.BuildServiceProvider();
+		var serviceProvider = services.BuildServiceProvider();
 
-		//ServiceLocator.SetServiceProvider(serviceProvider);
+		ServiceLocator.SetServiceProvider(serviceProvider);
 
 		//if (File.Exists(dbPath))
 		//{
@@ -55,6 +56,11 @@ public class Program
 		await compound.Add(Element.H, 2);
 		await compound.Add(Element.O, 1);
 		await compound.Add(Element.Cl, 1);
+
+		//var test = 2;
+
+		var densityElement = new GasDensityCalculator();
+		densityElement.Add(compound, 2);
 
 		Console.WriteLine(compound.CalculateMolecularWeight());
 
