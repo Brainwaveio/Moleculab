@@ -28,7 +28,7 @@ jobs:
           distribution: "adopt"
 
       - name: Restore dependencies
-        run: dotnet restorev Moleculab.slnf
+        run: dotnet restore Moleculab.slnf
 
       - name: Build
         run: dotnet build Moleculab.slnf --no-restore
