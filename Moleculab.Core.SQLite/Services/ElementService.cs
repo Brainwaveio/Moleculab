@@ -49,6 +49,14 @@ namespace Moleculab.Core.SQLite.Services
 			return _mapper.Map<List<ElementDto>>(model);
 		}
 
+		public async Task<ElementDto> GetByAtomicMassAsync(int atomicMass)
+		{
+			var model = await _moleculabDbContext.Elements
+				.FirstOrDefaultAsync(x => (int)Math.Round(x.AtomicMass) == atomicMass);
+
+			return _mapper.Map<ElementDto>(model);
+		}
+
 		public async Task<ElementDto> GetById(Guid id)
 		{
 			var model = await _moleculabDbContext.Elements
