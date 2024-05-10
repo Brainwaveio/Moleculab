@@ -9,8 +9,8 @@ namespace Moleculab.Math.Calculators.GasDensity
 	{
 		private readonly IElementService _elementService;
 
-		private Compound _compound { get; set; }
-		private int _quantity { get; set; }
+		private Compound _compound;
+		private int _quantity;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
 		public GasDensityCompoundCalculator()
