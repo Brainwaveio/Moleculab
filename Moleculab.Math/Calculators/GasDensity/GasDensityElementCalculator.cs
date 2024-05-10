@@ -37,7 +37,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 			}
 			catch (Exception ex)
 			{
-				throw new Exception(ex.Message);
+				throw new InvalidOperationException(ex.Message);
 			}
 		}
 
@@ -61,7 +61,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 			}
 			catch (Exception ex)
 			{
-				throw new Exception(ex.Message);
+				throw new InvalidOperationException(ex.Message);
 			}
 		}
 
@@ -84,7 +84,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 			}
 			catch (Exception ex)
 			{
-				throw new Exception(ex.Message);
+				throw new InvalidOperationException(ex.Message);
 			}
 		}
 	}
