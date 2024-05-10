@@ -11,7 +11,7 @@ namespace Moleculab.Math
 		public int Count => _composition.Count;
 		public Dictionary<ElementDto, int>.ValueCollection Values => _composition.Values;
 
-		private Dictionary<ElementDto, int> _composition { get; set; }
+		private Dictionary<ElementDto, int> _composition;
 		private readonly IElementService _elementService;
 
 		public Compound(Dictionary<ElementDto, int> composition)
@@ -26,6 +26,12 @@ namespace Moleculab.Math
 			_elementService = ServiceLocator.GetService<IElementService>();
 		}
 
+		/// <summary>
+		/// use this method if you want add some element
+		/// </summary>
+		/// <param name="element"></param>
+		/// <param name="quantity"></param>
+		/// <returns></returns>
 		public async Task Add(Element element, int quantity)
 		{
 			var jsonElement = await _elementService.GetByShortNameAsync(element.ToString());
@@ -40,6 +46,11 @@ namespace Moleculab.Math
 			}
 		}
 
+		/// <summary>
+		/// use this method if you want add only one element
+		/// </summary>
+		/// <param name="element"></param>
+		/// <returns></returns>
 		public async Task Add(Element element)
 		{
 			var jsonElement = await _elementService.GetByShortNameAsync(element.ToString());
