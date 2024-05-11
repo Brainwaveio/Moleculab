@@ -5,11 +5,11 @@ using Moleculab.Math.Interfaces.Calculators;
 
 namespace Moleculab.Math.Calculators
 {
-	public class ElementCalculators : IElementCalculators
+	public class ElementCalculator : IElementCalculators
 	{
 		private readonly IElementService _elementService;
 
-		public ElementCalculators()
+		public ElementCalculator()
 		{
 			_elementService = ServiceLocator.GetService<IElementService>();
 		}
