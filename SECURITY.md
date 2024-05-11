@@ -6,7 +6,7 @@ As an open-source project, we are unable to provide specific timelines for when 
 
 | Version | Supported on Windows | Supported on MacOS | Supported on iOS   | Supported on Android | Supported on Tizen |
 | ------- | -------------------- | ------------------ | ------------------ | -------------------- | ------------------ |
-| 1.0.0   | :white_check_mark:   | :white_check_mark: | :white_check_mark: | :white_check_mark:   | :x:                |
+| 1.0.0   | :white_check_mark:   | :x:                | :white_check_mark: | :white_check_mark:   | :x:                |
 
 ## Reporting a Vulnerability
 
