@@ -1,4 +1,5 @@
-﻿using Moleculab.Core.Extensions;
+﻿using Moleculab.Core;
+using Moleculab.Core.Extensions;
 using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces.Calculators.GasDensity;
@@ -31,7 +32,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 		{
 			try
 			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+				var sqlElement = await _elementService.GetByShortNameAsync(element);
 
 				_element = sqlElement;
 				_quantity = quantity;
@@ -46,10 +47,10 @@ namespace Moleculab.Math.Calculators.GasDensity
 		{
 			try
 			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+				var sqlElement = await _elementService.GetByShortNameAsync(element);
 				var atomicMassOfDelement = float.NaN;
 
-				if (_element.ShortName == Element.Cl.ToString())
+				if (_element.ShortName == Element.Cl)
 				{
 					atomicMassOfDelement = (float)35.35 * _quantity;
 				}
@@ -72,7 +73,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 			{
 				var atomicMassOfElement = float.NaN;
 
-				if (_element.ShortName == Element.Cl.ToString())
+				if (_element.ShortName == Element.Cl)
 				{
 					atomicMassOfElement = (float)35.35 * _quantity;
 				}

@@ -1,4 +1,5 @@
-﻿using Moleculab.Core.Extensions;
+﻿using Moleculab.Core;
+using Moleculab.Core.Extensions;
 using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces;
@@ -36,7 +37,7 @@ namespace Moleculab.Math
 		{
 			try
 			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+				var sqlElement = await _elementService.GetByShortNameAsync(element);
 				if (_composition.ContainsKey(sqlElement))
 				{
 					_composition[sqlElement] += quantity;
@@ -61,7 +62,7 @@ namespace Moleculab.Math
 		{
 			try
 			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+				var sqlElement = await _elementService.GetByShortNameAsync(element);
 				if (_composition.ContainsKey(sqlElement))
 				{
 					_composition[sqlElement] += 1;
@@ -84,7 +85,7 @@ namespace Moleculab.Math
 		/// <returns></returns>
 		public async Task<bool> Remove(Element element)
 		{
-			return _composition.Remove(await _elementService.GetByShortNameAsync(element.ToString()));
+			return _composition.Remove(await _elementService.GetByShortNameAsync(element));
 		}
 
 		public float CalculateMolecularWeight()
@@ -92,7 +93,7 @@ namespace Moleculab.Math
 			var totalWeight = default(float);
 			foreach (var element in _composition)
 			{
-				if (element.Key.ShortName != Element.Cl.ToString())
+				if (element.Key.ShortName != Element.Cl)
 				{
 					totalWeight += (int)System.Math.Round(element.Key.AtomicMass) * element.Value;
 				}

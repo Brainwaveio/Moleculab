@@ -1,4 +1,6 @@
-﻿namespace Moleculab.Math.Interfaces.Calculators
+﻿using Moleculab.Core;
+
+namespace Moleculab.Math.Interfaces.Calculators
 {
 	public interface IElementCalculators
 	{

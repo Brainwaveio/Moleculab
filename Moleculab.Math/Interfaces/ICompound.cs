@@ -1,4 +1,6 @@
-﻿namespace Moleculab.Math.Interfaces
+﻿using Moleculab.Core;
+
+namespace Moleculab.Math.Interfaces
 {
     public interface ICompound : ICloneable
     {

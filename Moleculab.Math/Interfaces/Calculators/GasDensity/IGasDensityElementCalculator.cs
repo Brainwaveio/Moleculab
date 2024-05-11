@@ -1,4 +1,5 @@
-﻿using Moleculab.Core.SQLite.DTOs;
+﻿using Moleculab.Core;
+using Moleculab.Core.SQLite.DTOs;
 
 namespace Moleculab.Math.Interfaces.Calculators.GasDensity
 {

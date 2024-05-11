@@ -1,4 +1,5 @@
-﻿using Moleculab.Core.Extensions;
+﻿using Moleculab.Core;
+using Moleculab.Core.Extensions;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces.Calculators;
 
@@ -15,14 +16,14 @@ namespace Moleculab.Math.Calculators
 
 		public async Task<int> CountOfElectrons(Element element)
 		{
-			return (int)(await _elementService.GetByShortNameAsync(element.ToString())).Index;
+			return (int)(await _elementService.GetByShortNameAsync(element)).Index;
 		}
 
 		public async Task<int> CountOfNeutrons(Element element)
 		{
-			var sqlElement = await _elementService.GetByShortNameAsync(element.ToString());
+			var sqlElement = await _elementService.GetByShortNameAsync(element);
 
-			if (sqlElement.ShortName != Element.Cl.ToString())
+			if (sqlElement.ShortName != Element.Cl)
 			{
 				return (int)(System.Math.Round(sqlElement.AtomicMass) - sqlElement.Index);
 			}

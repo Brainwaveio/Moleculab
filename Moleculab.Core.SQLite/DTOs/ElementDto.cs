@@ -4,7 +4,7 @@
 	{
 		public Guid? Id { get; set; }
 		public required long Index { get; set; }
-		public required string ShortName { get; set; }
+		public required Element ShortName { get; set; }
 		public required string ElementName { get; set; }
 		public required double AtomicMass { get; set; }
 		public required string CpkhexColor { get; set; }

@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.DAL.SQLite.Context;
-using Moleculab.DAL.SQLite.Models;
 
 namespace Moleculab.Core.SQLite.Services
 {
@@ -65,17 +64,17 @@ namespace Moleculab.Core.SQLite.Services
 			return _mapper.Map<ElementDto>(model);
 		}
 
-		public async Task<ElementDto> GetByShortNameAsync(string shortName)
+		public async Task<ElementDto> GetByShortNameAsync(Element shortName)
 		{
 			var model = await _moleculabDbContext.Elements
-				.FirstOrDefaultAsync(x => x.ShortName == shortName);
+				.FirstOrDefaultAsync(x => x.ShortName == shortName.ToString());
 
 			return _mapper.Map<ElementDto>(model);
 		}
 
 		public async Task<ElementDto> UpdateOrInsert(ElementDto obj)
 		{
-			var model = _mapper.Map<Element>(obj);
+			var model = _mapper.Map<DAL.SQLite.Models.Element>(obj);
 
 			if (model.Id == string.Empty || model.Id == " " || model.Id == null)
 			{

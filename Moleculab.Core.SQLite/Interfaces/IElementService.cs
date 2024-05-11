@@ -5,7 +5,7 @@ namespace Moleculab.Core.SQLite.Interfaces
 {
 	public interface IElementService : IService<ElementDto, ElementDto>
 	{
-		Task<ElementDto> GetByShortNameAsync(string shortName);
+		Task<ElementDto> GetByShortNameAsync(Element shortName);
 		Task<ElementDto> GetByAtomicMassAsync(int tomicMass);
 	}
 }
