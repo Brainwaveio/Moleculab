@@ -2,10 +2,11 @@
 using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces.Calculators.GasDensity;
+using System.Runtime.CompilerServices;
 
 namespace Moleculab.Math.Calculators.GasDensity
 {
-    public class GasDensityElementCalculator : IGasDensityElementCalculator
+	public class GasDensityElementCalculator : IGasDensityElementCalculator
 	{
 		private readonly IElementService _elementService;
 
@@ -73,7 +74,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 
 				if (_element.ShortName == Element.Cl.ToString())
 				{
-					atomicMassOfElement = (float)35.35	* _quantity;
+					atomicMassOfElement = (float)35.35 * _quantity;
 				}
 				else
 				{
@@ -86,6 +87,27 @@ namespace Moleculab.Math.Calculators.GasDensity
 			{
 				throw new InvalidOperationException(ex.Message);
 			}
+		}
+
+		public object Clone()
+		{
+			return new GasDensityElementCalculator(_element, _quantity);
+		}
+
+		public override bool Equals(object? obj)
+		{
+			if (obj == null || obj.GetType() != GetType())
+			{
+				return false;
+			}
+
+			var other = obj as GasDensityElementCalculator;
+			return _element.Equals(other?._element) && _quantity == other._quantity;
+		}
+
+		public override int GetHashCode()
+		{
+			return RuntimeHelpers.GetHashCode(this);
 		}
 	}
 }

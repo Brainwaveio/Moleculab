@@ -2,7 +2,7 @@
 
 namespace Moleculab.Math.Interfaces.Calculators.GasDensity
 {
-	public interface IGasDensityCompoundCalculator
+	public interface IGasDensityCompoundCalculator : ICloneable
 	{
 		void AddOfCompound(Compound compound, int quantity);
 		float GetEquals(Compound compound);

@@ -2,6 +2,7 @@
 using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces.Calculators.GasDensity;
+using System.Runtime.CompilerServices;
 
 namespace Moleculab.Math.Calculators.GasDensity
 {
@@ -57,6 +58,27 @@ namespace Moleculab.Math.Calculators.GasDensity
 			{
 				throw new InvalidOperationException(ex.Message);
 			}
+		}
+
+		public object Clone()
+		{
+			return new GasDensityCompoundCalculator(_compound, _quantity);
+		}
+
+		public override bool Equals(object? obj)
+		{
+			if (obj == null || obj.GetType() != GetType())
+			{
+				return false;
+			}
+
+			var other = obj as GasDensityCompoundCalculator;
+			return _compound.Equals(other?._compound) && _quantity == other._quantity;
+		}
+
+		public override int GetHashCode()
+		{
+			return RuntimeHelpers.GetHashCode(this);
 		}
 	}
 }

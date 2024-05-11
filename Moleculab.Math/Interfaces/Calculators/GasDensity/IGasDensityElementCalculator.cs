@@ -2,7 +2,7 @@
 
 namespace Moleculab.Math.Interfaces.Calculators.GasDensity
 {
-    public interface IGasDensityElementCalculator
+    public interface IGasDensityElementCalculator : ICloneable
     {
         Task AddDensityOfElementAsync(Element element, int quantity);
         Task<float> GetEqualsAsync(Element element);
