@@ -106,7 +106,7 @@ namespace Moleculab.Math
 
 		public object Clone()
 		{
-			return new Compound(_composition));
+			return new Compound(_composition);
 		}
 
 		public override bool Equals(object? obj)
