@@ -40,13 +40,5 @@ namespace Moleculab.Core.Services
 			return elements.FirstOrDefault(e => e.Id == id) 
 				?? throw new ArgumentNullException("Data can not be null");
 		}
-
-		//for test
-		public async Task<ElementDto> GetByShortNameAsync(string shortName)
-		{
-			var elements = await GetAllAsync();
-			return elements.FirstOrDefault(e => e.ShortName == shortName)
-				?? throw new ArgumentNullException("Data can not be null");
-		}
 	}
 }

@@ -26,11 +26,16 @@ namespace Moleculab.Core.JSONConvertor
 				var elementState = ParseElementState(cells?[11]
 					?? throw new ArgumentNullException("Argument in JSON can not be null"));
 
+				if (!Enum.TryParse<Element>(cells[1], out var elementEnum))
+				{
+					continue;
+				}
+
 				elements.Add(new()
 				{
 					Id = Guid.NewGuid(),
 					Index = long.Parse(cells[0]),
-					ShortName = cells[1],
+					ShortName = elementEnum,
 					ElementName = cells[2],
 					AtomicMass = double.Parse(cells[3], CultureInfo.InvariantCulture),
 					CpkhexColor = cells[4],
