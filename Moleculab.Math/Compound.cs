@@ -88,9 +88,9 @@ namespace Moleculab.Math
 			return _composition.Remove(await _elementService.GetByShortNameAsync(element));
 		}
 
-		public float CalculateMolecularWeight()
+		public double CalculateMolecularWeight()
 		{
-			var totalWeight = default(float);
+			var totalWeight = default(double);
 			foreach (var element in _composition)
 			{
 				if (element.Key.ShortName != Element.Cl)
@@ -99,7 +99,7 @@ namespace Moleculab.Math
 				}
 				else
 				{
-					totalWeight += (float)35.35 * element.Value;
+					totalWeight += (double)35.35 * element.Value;
 				}
 			}
 			return totalWeight;

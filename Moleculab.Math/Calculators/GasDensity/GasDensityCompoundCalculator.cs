@@ -40,7 +40,7 @@ namespace Moleculab.Math.Calculators.GasDensity
 			}
 		}
 
-		public float GetEquals(Compound compound)
+		public double GetEquals(Compound compound)
 		{
 			var atomicMassOfDelement = _compound.CalculateMolecularWeight() * _quantity;
 			return compound.CalculateMolecularWeight() / atomicMassOfDelement;

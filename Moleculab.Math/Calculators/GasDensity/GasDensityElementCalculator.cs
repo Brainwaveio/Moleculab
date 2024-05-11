@@ -43,23 +43,23 @@ namespace Moleculab.Math.Calculators.GasDensity
 			}
 		}
 
-		public async Task<float> GetEqualsAsync(Element element)
+		public async Task<double> GetEqualsAsync(Element element)
 		{
 			try
 			{
 				var sqlElement = await _elementService.GetByShortNameAsync(element);
-				var atomicMassOfDelement = float.NaN;
+				var atomicMassOfDelement = double.NaN;
 
 				if (_element.ShortName == Element.Cl)
 				{
-					atomicMassOfDelement = (float)35.35 * _quantity;
+					atomicMassOfDelement = (double)35.35 * _quantity;
 				}
 				else
 				{
 					atomicMassOfDelement = (int)System.Math.Round(_element.AtomicMass) * _quantity;
 				}
 
-				return (float)System.Math.Round(sqlElement.AtomicMass) / atomicMassOfDelement;
+				return (double)System.Math.Round(sqlElement.AtomicMass) / atomicMassOfDelement;
 			}
 			catch (Exception ex)
 			{
@@ -71,11 +71,11 @@ namespace Moleculab.Math.Calculators.GasDensity
 		{
 			try
 			{
-				var atomicMassOfElement = float.NaN;
+				var atomicMassOfElement = double.NaN;
 
 				if (_element.ShortName == Element.Cl)
 				{
-					atomicMassOfElement = (float)35.35 * _quantity;
+					atomicMassOfElement = (double)35.35 * _quantity;
 				}
 				else
 				{

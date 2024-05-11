@@ -5,7 +5,7 @@ namespace Moleculab.Math.Interfaces.Calculators.GasDensity
 	public interface IGasDensityCompoundCalculator : ICloneable
 	{
 		void AddOfCompound(Compound compound, int quantity);
-		float GetEquals(Compound compound);
+		double GetEquals(Compound compound);
 		Task<ElementDto> GetElementAsync();
 	}
 }
