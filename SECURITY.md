@@ -4,9 +4,9 @@
 
 As an open-source project, we are unable to provide specific timelines for when new versions of our software will be released. Our team does not have the resources to forecast precise release dates. However, we can inform you about which versions are currently being supported with security updates.
 
-| Version | Supported on Windows | Supported on MacOS |
-| ------- | -------------------- | ------------------ |
-| 1.0.0   | :white_check_mark:   | :x:                |
+| Version | Supported on Windows | Supported on MacOS | Supported on iOS   | Supported on Android | Supported on Tizen |
+| ------- | -------------------- | ------------------ | ------------------ | -------------------- | ------------------ |
+| 1.0.0   | :white_check_mark:   | :white_check_mark: | :white_check_mark: | :white_check_mark:   | :x:                |
 
 ## Reporting a Vulnerability
 
