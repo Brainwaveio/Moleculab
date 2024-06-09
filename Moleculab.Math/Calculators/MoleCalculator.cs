@@ -1,33 +1,33 @@
 ﻿using Moleculab.Core;
 using Moleculab.Core.Extensions;
+using Moleculab.Core.SQLite.DTOs;
 using Moleculab.Core.SQLite.Interfaces;
 
-namespace Moleculab.Math.Calculators
+namespace Moleculab.Math.Calculators;
+
+public class MoleCalculator
 {
-	public class MoleCalculator
+	private readonly IElementService _elementService;
+
+	public MoleCalculator()
 	{
-		private readonly IElementService _elementService;
+		_elementService = ServiceLocator.GetService<IElementService>();
+	}
 
-		public MoleCalculator()
+	public async Task<double> CalculateMolesAsync(double mass, Element element)
+	{
+		ElementDto sqlElement = await _elementService.GetByShortNameAsync(element);
+
+		if (element == Element.Cl)
 		{
-			_elementService = ServiceLocator.GetService<IElementService>();
+			return mass / 35.35;
 		}
 
-		public async Task<double> CalculateMolesAsync(double mass, Element element)
-		{
-			var sqlElement = await _elementService.GetByShortNameAsync(element);
+		return mass / System.Math.Round(sqlElement.AtomicMass);
+	}
 
-			if (element == Element.Cl)
-			{
-				return mass / 35.35;
-			}
-
-			return mass / System.Math.Round(sqlElement.AtomicMass);
-		}
-
-		public static double CalculateMolesAsync(double mass, Compound compound)
-		{
-			return mass / compound.CalculateMolecularWeight();
-		}
+	public static double CalculateMolesAsync(double mass, Compound compound)
+	{
+		return mass / compound.CalculateMolecularWeight();
 	}
 }

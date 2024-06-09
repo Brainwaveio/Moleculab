@@ -1,11 +1,10 @@
 ﻿using Moleculab.Core;
 
-namespace Moleculab.Math.Interfaces.Calculators
+namespace Moleculab.Math.Interfaces.Calculators;
+
+public interface IElementCalculators
 {
-	public interface IElementCalculators
-	{
-		Task<int> CountOfNeutrons(Element element);
-		Task<int> CountOfElectrons(Element element);
-		Task<int> CountOfProtons(Element element);
-	}
+	Task<int> CountOfNeutrons(Element element);
+	Task<int> CountOfElectrons(Element element);
+	Task<int> CountOfProtons(Element element);
 }

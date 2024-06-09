@@ -5,110 +5,109 @@ using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces.Calculators.GasDensity;
 using System.Runtime.CompilerServices;
 
-namespace Moleculab.Math.Calculators.GasDensity
-{
-	public class GasDensityElementCalculator : IGasDensityElementCalculator
-	{
-		private readonly IElementService _elementService;
+namespace Moleculab.Math.Calculators.GasDensity;
 
-		private ElementDto _element;
-		private int _quantity;
+public class GasDensityElementCalculator : IGasDensityElementCalculator
+{
+	private readonly IElementService _elementService;
+
+	private ElementDto _element;
+	private int _quantity;
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-		public GasDensityElementCalculator()
+	public GasDensityElementCalculator()
 #pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
-		{
-			_elementService = ServiceLocator.GetService<IElementService>();
-		}
+	{
+		_elementService = ServiceLocator.GetService<IElementService>();
+	}
 
-		public GasDensityElementCalculator(ElementDto element, int quantity)
+	public GasDensityElementCalculator(ElementDto element, int quantity)
+	{
+		_element = element;
+		_quantity = quantity;
+		_elementService = ServiceLocator.GetService<IElementService>();
+	}
+
+	public async Task AddDensityOfElementAsync(Element element, int quantity)
+	{
+		try
 		{
-			_element = element;
+			ElementDto sqlElement = await _elementService.GetByShortNameAsync(element);
+
+			_element = sqlElement;
 			_quantity = quantity;
-			_elementService = ServiceLocator.GetService<IElementService>();
 		}
-
-		public async Task AddDensityOfElementAsync(Element element, int quantity)
+		catch (Exception ex)
 		{
-			try
-			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element);
-
-				_element = sqlElement;
-				_quantity = quantity;
-			}
-			catch (Exception ex)
-			{
-				throw new InvalidOperationException(ex.Message);
-			}
+			throw new InvalidOperationException(ex.Message);
 		}
+	}
 
-		public async Task<double> GetEqualsAsync(Element element)
+	public async Task<double> GetEqualsAsync(Element element)
+	{
+		try
 		{
-			try
-			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element);
-				var atomicMassOfDelement = double.NaN;
+			ElementDto sqlElement = await _elementService.GetByShortNameAsync(element);
+			double atomicMassOfDelement;
 
-				if (_element.ShortName == Element.Cl)
-				{
-					atomicMassOfDelement = (double)35.35 * _quantity;
-				}
-				else
-				{
-					atomicMassOfDelement = (int)System.Math.Round(_element.AtomicMass) * _quantity;
-				}
-
-				return (double)System.Math.Round(sqlElement.AtomicMass) / atomicMassOfDelement;
-			}
-			catch (Exception ex)
+			if (_element.ShortName == Element.Cl)
 			{
-				throw new InvalidOperationException(ex.Message);
+				atomicMassOfDelement = (double)35.35 * _quantity;
 			}
+			else
+			{
+				atomicMassOfDelement = (int)System.Math.Round(_element.AtomicMass) * _quantity;
+			}
+
+			return (double)System.Math.Round(sqlElement.AtomicMass) / atomicMassOfDelement;
 		}
-
-		public async Task<ElementDto> GetElementAsync()
+		catch (Exception ex)
 		{
-			try
-			{
-				var atomicMassOfElement = double.NaN;
-
-				if (_element.ShortName == Element.Cl)
-				{
-					atomicMassOfElement = (double)35.35 * _quantity;
-				}
-				else
-				{
-					atomicMassOfElement = (int)System.Math.Round(_element.AtomicMass) * _quantity;
-				}
-
-				return await _elementService.GetByAtomicMassAsync((int)atomicMassOfElement);
-			}
-			catch (Exception ex)
-			{
-				throw new InvalidOperationException(ex.Message);
-			}
+			throw new InvalidOperationException(ex.Message);
 		}
+	}
 
-		public object Clone()
+	public async Task<ElementDto> GetElementAsync()
+	{
+		try
 		{
-			return new GasDensityElementCalculator(_element, _quantity);
-		}
+			double atomicMassOfElement;
 
-		public override bool Equals(object? obj)
-		{
-			if (obj == null || obj.GetType() != GetType())
+			if (_element.ShortName == Element.Cl)
 			{
-				return false;
+				atomicMassOfElement = (double)35.35 * _quantity;
+			}
+			else
+			{
+				atomicMassOfElement = (int)System.Math.Round(_element.AtomicMass) * _quantity;
 			}
 
-			var other = obj as GasDensityElementCalculator;
-			return _element.Equals(other?._element) && _quantity == other._quantity;
+			return await _elementService.GetByAtomicMassAsync((int)atomicMassOfElement);
+		}
+		catch (Exception ex)
+		{
+			throw new InvalidOperationException(ex.Message);
+		}
+	}
+
+	public object Clone()
+	{
+		return new GasDensityElementCalculator(_element, _quantity);
+	}
+
+	public override bool Equals(object? obj)
+	{
+		if (obj == null || obj.GetType() != GetType())
+		{
+			return false;
 		}
 
-		public override int GetHashCode()
-		{
-			return RuntimeHelpers.GetHashCode(this);
-		}
+		GasDensityElementCalculator? other = obj as GasDensityElementCalculator;
+		return _element.Equals(other?._element) && _quantity == other._quantity;
+	}
+
+	public override int GetHashCode()
+	{
+		return RuntimeHelpers.GetHashCode(this);
 	}
 }

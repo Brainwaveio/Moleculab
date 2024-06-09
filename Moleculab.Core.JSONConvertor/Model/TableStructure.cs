@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace Moleculab.Core.JSONConvertor.Model
+namespace Moleculab.Core.JSONConvertor.Model;
+
+internal class TableStructure
 {
-	internal class TableStructure
-	{
-		[JsonProperty("Table")]
-		public Table? Table { get; set; }
-	}
+	[JsonProperty("Table")]
+	public Table? Table { get; set; }
 }

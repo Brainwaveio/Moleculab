@@ -1,10 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace Moleculab.Core.JSONConvertor.Model
+namespace Moleculab.Core.JSONConvertor.Model;
+
+internal class Row
 {
-	internal class Row
-	{
-		[JsonProperty("Cell")]
-		public List<string>? Cell { get; set; }
-	}
+	[JsonProperty("Cell")]
+	public List<string>? Cell { get; set; }
 }

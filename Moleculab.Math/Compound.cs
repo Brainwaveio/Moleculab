@@ -5,120 +5,119 @@ using Moleculab.Core.SQLite.Interfaces;
 using Moleculab.Math.Interfaces;
 using System.Runtime.CompilerServices;
 
-namespace Moleculab.Math
+namespace Moleculab.Math;
+
+public class Compound : ICompound
 {
-	public class Compound : ICompound
+	public int Count => _composition.Count;
+	public Dictionary<ElementDto, int>.ValueCollection Values => _composition.Values;
+
+	private Dictionary<ElementDto, int> _composition;
+	private readonly IElementService _elementService;
+
+	public Compound(Dictionary<ElementDto, int> composition)
 	{
-		public int Count => _composition.Count;
-		public Dictionary<ElementDto, int>.ValueCollection Values => _composition.Values;
+		_composition = composition;
+		_elementService = ServiceLocator.GetService<IElementService>();
+	}
 
-		private Dictionary<ElementDto, int> _composition;
-		private readonly IElementService _elementService;
+	public Compound()
+	{
+		_composition = new Dictionary<ElementDto, int>();
+		_elementService = ServiceLocator.GetService<IElementService>();
+	}
 
-		public Compound(Dictionary<ElementDto, int> composition)
+	/// <summary>
+	/// use this method if you want add some element
+	/// </summary>
+	/// <param name="element"></param>
+	/// <param name="quantity"></param>
+	/// <returns></returns>
+	public async Task Add(Element element, int quantity)
+	{
+		try
 		{
-			_composition = composition;
-			_elementService = ServiceLocator.GetService<IElementService>();
-		}
-
-		public Compound()
-		{
-			_composition = new Dictionary<ElementDto, int>();
-			_elementService = ServiceLocator.GetService<IElementService>();
-		}
-
-		/// <summary>
-		/// use this method if you want add some element
-		/// </summary>
-		/// <param name="element"></param>
-		/// <param name="quantity"></param>
-		/// <returns></returns>
-		public async Task Add(Element element, int quantity)
-		{
-			try
+			ElementDto sqlElement = await _elementService.GetByShortNameAsync(element);
+			if (_composition.ContainsKey(sqlElement))
 			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element);
-				if (_composition.ContainsKey(sqlElement))
-				{
-					_composition[sqlElement] += quantity;
-				}
-				else
-				{
-					_composition.Add(sqlElement, quantity);
-				}
+				_composition[sqlElement] += quantity;
 			}
-			catch (Exception ex)
+			else
 			{
-				throw new Exception(ex.Message);
+				_composition.Add(sqlElement, quantity);
 			}
 		}
-
-		/// <summary>
-		/// use this method if you want add only one element
-		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		public async Task Add(Element element)
+		catch (Exception ex)
 		{
-			try
+			throw new Exception(ex.Message);
+		}
+	}
+
+	/// <summary>
+	/// use this method if you want add only one element
+	/// </summary>
+	/// <param name="element"></param>
+	/// <returns></returns>
+	public async Task Add(Element element)
+	{
+		try
+		{
+			ElementDto sqlElement = await _elementService.GetByShortNameAsync(element);
+			if (_composition.ContainsKey(sqlElement))
 			{
-				var sqlElement = await _elementService.GetByShortNameAsync(element);
-				if (_composition.ContainsKey(sqlElement))
-				{
-					_composition[sqlElement] += 1;
-				}
-				else
-				{
-					_composition.Add(sqlElement, 1);
-				}
+				_composition[sqlElement] += 1;
 			}
-			catch (Exception ex)
+			else
 			{
-				throw new Exception(ex.Message);
+				_composition.Add(sqlElement, 1);
 			}
 		}
-
-		/// <summary>
-		/// This method removes the element completely
-		/// </summary>
-		/// <param name="element"></param>
-		/// <returns></returns>
-		public async Task<bool> Remove(Element element)
+		catch (Exception ex)
 		{
-			return _composition.Remove(await _elementService.GetByShortNameAsync(element));
+			throw new Exception(ex.Message);
 		}
+	}
 
-		public double CalculateMolecularWeight()
+	/// <summary>
+	/// This method removes the element completely
+	/// </summary>
+	/// <param name="element"></param>
+	/// <returns></returns>
+	public async Task<bool> Remove(Element element)
+	{
+		return _composition.Remove(await _elementService.GetByShortNameAsync(element));
+	}
+
+	public double CalculateMolecularWeight()
+	{
+		double totalWeight = default;
+		foreach (var element in _composition)
 		{
-			var totalWeight = default(double);
-			foreach (var element in _composition)
+			if (element.Key.ShortName != Element.Cl)
 			{
-				if (element.Key.ShortName != Element.Cl)
-				{
-					totalWeight += (int)System.Math.Round(element.Key.AtomicMass) * element.Value;
-				}
-				else
-				{
-					totalWeight += (double)35.35 * element.Value;
-				}
+				totalWeight += (int)System.Math.Round(element.Key.AtomicMass) * element.Value;
 			}
-			return totalWeight;
+			else
+			{
+				totalWeight += (double)35.35 * element.Value;
+			}
 		}
+		return totalWeight;
+	}
 
-		public object Clone()
-		{
-			return new Compound(_composition);
-		}
+	public object Clone()
+	{
+		return new Compound(_composition);
+	}
 
-		public override bool Equals(object? obj)
-		{
-			return obj is Compound compound &&
-				   EqualityComparer<Dictionary<ElementDto, int>>.Default.Equals(_composition, compound._composition);
-		}
+	public override bool Equals(object? obj)
+	{
+		return obj is Compound compound &&
+			   EqualityComparer<Dictionary<ElementDto, int>>.Default.Equals(_composition, compound._composition);
+	}
 
-		public override int GetHashCode()
-		{
-			return RuntimeHelpers.GetHashCode(this);
-		}
+	public override int GetHashCode()
+	{
+		return RuntimeHelpers.GetHashCode(this);
 	}
 }
